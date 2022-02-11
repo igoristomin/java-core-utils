@@ -9,7 +9,7 @@ Collection of utilities containing mathematical and textual operations using onl
 * Languages: Java 8 (SDK 1.8)
 
 ## Important files
-* Builder configuration: \build.gradle
+* Builder configuration: /build.gradle
 
 ## Backend schema
 ![Element relationships](readme/back-schema.svg)
