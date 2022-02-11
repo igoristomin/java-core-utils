@@ -50,7 +50,7 @@ class MoreUtil {
 
     private static double getMore(double[] nums) {
         double result = nums[0];
-        for (int i = 1; i < nums.length - 1; i++) {
+        for (int i = 1; i < nums.length; i++) {
             if (result < nums[i]) result = nums[i];
         }
         return result;
