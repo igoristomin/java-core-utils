@@ -1,12 +1,13 @@
 package console.java_core_utils.util;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class PrintUtil {
 
     public static final String COMMAND_BACK = "!back";
     public static final String COMMAND_CLOSE = "!close";
-    public static final String FORMAT_RESULT = "%.3f";
+    public static final DecimalFormat DF = new DecimalFormat("0.###");
 
     public static void printHead(String text) {
         System.out.println("\n======== " + text + " ========");
@@ -71,7 +72,7 @@ public class PrintUtil {
     }
 
     public static void printResult(String resultOut) {
-        System.out.println(resultOut); // Get the result
+        System.out.println(resultOut);
         printBorder("fat");
     }
 

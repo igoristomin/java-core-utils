@@ -35,11 +35,11 @@ class LessUtil {
                     nums[i] = Double.parseDouble(numsLineSplit[i]);
                 }
 
-                // Get result from method
-                double result = getLess(nums);
+                // Get and format result from method
+                String result = DF.format(getLess(nums));
 
                 // Set output format and print the result
-                String resultOut = String.format("Less of %s = " + FORMAT_RESULT, numsLine, result);
+                String resultOut = String.format("Less of %s = %s", numsLine, result);
                 printResult(resultOut);
             } catch (NumberFormatException e) {
                 // Print message with invalid value on exception

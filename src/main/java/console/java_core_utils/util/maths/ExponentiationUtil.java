@@ -37,12 +37,11 @@ class ExponentiationUtil {
                 // Convert value. Expect NumberFormatException
                 double extent = Double.parseDouble(extentLine);
 
-                // Get result from method
-                double result = getExponentiation(num, extent);
+                // Get and format result from method
+                String result = DF.format(getExponentiation(num, extent));
 
                 // Set output format and print the result
-                String resultOut = String.format("%s to the extent of %s = " + FORMAT_RESULT,
-                        numLine, extentLine, result);
+                String resultOut = String.format("%s to the extent of %s = %s", numLine, extentLine, result);
                 printResult(resultOut);
             } catch (NumberFormatException e) {
                 // Print message with invalid value on exception

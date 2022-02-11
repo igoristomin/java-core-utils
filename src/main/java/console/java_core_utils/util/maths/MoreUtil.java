@@ -35,11 +35,11 @@ class MoreUtil {
                     nums[i] = Double.parseDouble(numsLineSplit[i]);
                 }
 
-                // Get result from method
-                double result = getMore(nums);
+                // Get and format result from method
+                String result = DF.format(getMore(nums));
 
                 // Set output format and print the result
-                String resultOut = String.format("More of %s = " + FORMAT_RESULT, numsLine, result);
+                String resultOut = String.format("More of %s = %s", numsLine, result);
                 printResult(resultOut);
             } catch (NumberFormatException e) {
                 // Print message with invalid value on exception

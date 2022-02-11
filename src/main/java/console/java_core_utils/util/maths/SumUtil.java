@@ -35,11 +35,11 @@ public class SumUtil {
                     nums[i] = Double.parseDouble(numsLineSplit[i]);
                 }
 
-                // Get result from method
-                double result = getSum(nums);
+                // Get and format result from method
+                String result = DF.format(getSum(nums));
 
                 // Set output format and print the result
-                String resultOut = String.format("Sum of %s = " + FORMAT_RESULT, numsLine, result);
+                String resultOut = String.format("Sum of %s = %s", numsLine, result);
                 printResult(resultOut);
             } catch (NumberFormatException e) {
                 // Print message with invalid value on exception

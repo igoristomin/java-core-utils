@@ -23,12 +23,12 @@ class SquareRootUtil {
             closeIf(numLine, numInput);
 
             try {
-                // Convert values and get result from method
+                // Convert values and get, format result from method
                 double num = Double.parseDouble(numLine);
-                double result = getRoot(num);
+                String result = DF.format(getRoot(num));
 
                 // Set output format and print the result
-                String resultOut = String.format("Square root of %s = " + FORMAT_RESULT, numLine, result);
+                String resultOut = String.format("Square root of %s = %s", numLine, result);
                 printResult(resultOut);
             } catch (NumberFormatException e) {
                 // Print message with invalid value on exception
