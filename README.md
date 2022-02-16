@@ -6,7 +6,7 @@ Collection of utilities containing mathematical and textual operations using onl
 ## Used tools
 * Platform: Spring Boot 2.6.1
 * Builder: Gradle
-* Languages: Java 8 (SDK 1.8)
+* Languages: Java 8 (JDK 8)
 
 ## Important files
 * Builder configuration: /build.gradle
