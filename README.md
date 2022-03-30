@@ -20,8 +20,8 @@ Collection of utilities containing mathematical and textual operations using onl
 ## Release notes
 * Project type: Console application
 * Date of release: 2 January 2022
-* Date of last update: 16 February 2022
-* Current version: 1.3
+* Date of last update: 30 March 2022
+* Current version: 1.4
 
 ---
 Author [Igor Istomin](https://github.com/igoristomin)
