@@ -10,7 +10,7 @@ class CharReplacementUtil {
         Scanner charsInput = new Scanner(System.in);
         Scanner charsReplInput = new Scanner(System.in);
 
-        while (true) {
+        while(true) {
             // Print menu
             printHead("Char replacement");
             printBackClose();
@@ -20,21 +20,21 @@ class CharReplacementUtil {
             String textLine = textInput.nextLine();
 
             // Do back or close
-            if (backIf(textLine)) break;
+            if(backIf(textLine)) break;
             closeIf(textLine, textInput);
 
             System.out.print("Enter chars: ");
             String charsLine = charsInput.nextLine();
 
             // Do back or close
-            if (backIf(charsLine)) break;
+            if(backIf(charsLine)) break;
             closeIf(charsLine, charsInput);
 
             System.out.print("Enter replacement chars: ");
             String charsReplLine = charsReplInput.nextLine();
 
             // Do back or close
-            if (backIf(charsReplLine)) break;
+            if(backIf(charsReplLine)) break;
             closeIf(charsReplLine, charsReplInput);
 
             // Get result

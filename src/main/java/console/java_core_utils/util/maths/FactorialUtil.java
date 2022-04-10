@@ -8,7 +8,7 @@ class FactorialUtil {
     static void run() {
         Scanner numInput = new Scanner(System.in);
 
-        while (true) {
+        while(true) {
             // Print menu
             printHead("Factorial");
             printBackClose();
@@ -18,7 +18,7 @@ class FactorialUtil {
             String numLine = numInput.nextLine();
 
             // Do back or close
-            if (backIf(numLine)) break;
+            if(backIf(numLine)) break;
             closeIf(numLine, numInput);
 
             try {
@@ -29,7 +29,7 @@ class FactorialUtil {
                 // Set output format and print the result
                 String resultOut = String.format("Factorial of %s = %s", numLine, result);
                 printResult(resultOut);
-            } catch (NumberFormatException e) {
+            } catch(NumberFormatException e) {
                 // Print message with invalid value on exception
                 printInvalidValue();
             }
@@ -38,7 +38,7 @@ class FactorialUtil {
 
     private static double getFactorial(double num) {
         int result = 1;
-        for (int i = 1; i <= num; i++) {
+        for(int i = 1; i <= num; i++) {
             result *= i;
         }
         return result;

@@ -9,7 +9,7 @@ public class CompositionUtil {
     static void run() {
         Scanner numsInput = new Scanner(System.in);
 
-        while (true) {
+        while(true) {
             // Print menu
             printHead("Composition");
             printBackClose();
@@ -19,7 +19,7 @@ public class CompositionUtil {
             String numsLine = numsInput.nextLine();
 
             // Do back or close
-            if (backIf(numsLine)) break;
+            if(backIf(numsLine)) break;
             closeIf(numsLine, numsInput);
 
             // Convert String value to String[] array
@@ -31,7 +31,7 @@ public class CompositionUtil {
 
             try {
                 // Convert String[] array to double[] array
-                for (int i = 0; i < numsLineSplit.length; i++) {
+                for(int i = 0; i < numsLineSplit.length; i++) {
                     nums[i] = Double.parseDouble(numsLineSplit[i]);
                 }
 
@@ -41,7 +41,7 @@ public class CompositionUtil {
                 // Set output format and print the result
                 String resultOut = String.format("Composition of %s = %s", numsLine, result);
                 printResult(resultOut);
-            } catch (NumberFormatException e) {
+            } catch(NumberFormatException e) {
                 // Print message with invalid value on exception
                 printInvalidValue();
             }
@@ -50,7 +50,7 @@ public class CompositionUtil {
 
     private static double getComposition(double[] nums) {
         double result = 1;
-        for (double num : nums) {
+        for(double num : nums) {
             result *= num;
         }
         return result;

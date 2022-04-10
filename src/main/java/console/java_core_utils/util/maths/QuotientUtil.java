@@ -9,7 +9,7 @@ public class QuotientUtil {
     static void run() {
         Scanner numsInput = new Scanner(System.in);
 
-        while (true) {
+        while(true) {
             // Print menu
             printHead("Quotient");
             printBackClose();
@@ -19,7 +19,7 @@ public class QuotientUtil {
             String numsLine = numsInput.nextLine();
 
             // Do back or close
-            if (backIf(numsLine)) break;
+            if(backIf(numsLine)) break;
             closeIf(numsLine, numsInput);
 
             // Convert String value to String[] array
@@ -31,7 +31,7 @@ public class QuotientUtil {
 
             try {
                 // Convert String[] array to double[] array
-                for (int i = 0; i < numsLineSplit.length; i++) {
+                for(int i = 0; i < numsLineSplit.length; i++) {
                     nums[i] = Double.parseDouble(numsLineSplit[i]);
                 }
 
@@ -41,7 +41,7 @@ public class QuotientUtil {
                 // Set output format and print the result
                 String resultOut = String.format("Quotient of %s = %s", numsLine, result);
                 printResult(resultOut);
-            } catch (NumberFormatException e) {
+            } catch(NumberFormatException e) {
                 // Print message with invalid value on exception
                 printInvalidValue();
             }
@@ -50,7 +50,7 @@ public class QuotientUtil {
 
     private static double getQuotient(double[] nums) {
         double result = nums[0];
-        for (int i = 1; i < nums.length; i++) {
+        for(int i = 1; i < nums.length; i++) {
             result /= nums[i];
         }
         return result;

@@ -10,7 +10,7 @@ public class MainTextUtil {
         String utilName = "";
         boolean execute = true;
 
-        while (execute) {
+        while(execute) {
             // Print menu
             printHead("Text utils");
             System.out.println("!chars-amount");
@@ -22,7 +22,7 @@ public class MainTextUtil {
             utilName = printEnterUtil(utilName, utilNameInput);
 
             // Check entered value and perform actions
-            switch (utilName) {
+            switch(utilName) {
                 case "!chars-amount":
                     printDoneCase("!chars-amount");
                     CharAmountUtil.run();
@@ -42,7 +42,7 @@ public class MainTextUtil {
             }
 
             // Do back or close
-            if (backIf(utilName)) break;
+            if(backIf(utilName)) break;
             closeIf(utilName, utilNameInput);
         }
     }

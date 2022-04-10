@@ -8,7 +8,7 @@ class AverageUtil {
     static void run() {
         Scanner numsInput = new Scanner(System.in);
 
-        while (true) {
+        while(true) {
             // Print menu
             printHead("Average");
             printBackClose();
@@ -18,7 +18,7 @@ class AverageUtil {
             String numsLine = numsInput.nextLine();
 
             // Do back or close
-            if (backIf(numsLine)) break;
+            if(backIf(numsLine)) break;
             closeIf(numsLine, numsInput);
 
             // Convert String value to String[] array
@@ -30,7 +30,7 @@ class AverageUtil {
 
             try {
                 // Convert String[] array to double[] array
-                for (int i = 0; i < numsLineSplit.length; i++) {
+                for(int i = 0; i < numsLineSplit.length; i++) {
                     nums[i] = Double.parseDouble(numsLineSplit[i]);
                 }
 
@@ -40,7 +40,7 @@ class AverageUtil {
                 // Set output format and print the result
                 String resultOut = String.format("Average of %s = %s", numsLine, result);
                 printResult(resultOut);
-            } catch (NumberFormatException e) {
+            } catch(NumberFormatException e) {
                 // Print message with invalid value on exception
                 printInvalidValue();
             }
@@ -49,7 +49,7 @@ class AverageUtil {
 
     private static double getAverage(double[] nums) {
         double result = 0;
-        for (double num : nums) {
+        for(double num : nums) {
             result += num;
         }
         return result / nums.length;

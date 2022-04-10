@@ -31,7 +31,7 @@ public class PrintUtil {
     }
 
     public static boolean backIf(String value) {
-        if (value.equals(COMMAND_BACK)) {
+        if(value.equals(COMMAND_BACK)) {
             System.out.println("Done " + COMMAND_BACK);
             printBorder("fat");
             return true;
@@ -40,7 +40,7 @@ public class PrintUtil {
     }
 
     public static void closeIf(String value, Scanner valueInput) {
-        if (value.equals(COMMAND_CLOSE)) {
+        if(value.equals(COMMAND_CLOSE)) {
             System.out.println("Done " + COMMAND_CLOSE);
             printBorder("fat");
             valueInput.close();
@@ -49,7 +49,7 @@ public class PrintUtil {
     }
 
     public static void printBorder(String type) {
-        switch (type) {
+        switch(type) {
             case "thin":
                 System.out.println("--------------------------------");
                 break;

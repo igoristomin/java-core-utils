@@ -9,7 +9,7 @@ class SquareRootUtil {
     static void run() {
         Scanner numInput = new Scanner(System.in);
 
-        while (true) {
+        while(true) {
             // Print menu
             printHead("Square root");
             printBackClose();
@@ -19,7 +19,7 @@ class SquareRootUtil {
             String numLine = numInput.nextLine();
 
             // Do back or close
-            if (backIf(numLine)) break;
+            if(backIf(numLine)) break;
             closeIf(numLine, numInput);
 
             try {
@@ -30,7 +30,7 @@ class SquareRootUtil {
                 // Set output format and print the result
                 String resultOut = String.format("Square root of %s = %s", numLine, result);
                 printResult(resultOut);
-            } catch (NumberFormatException e) {
+            } catch(NumberFormatException e) {
                 // Print message with invalid value on exception
                 printInvalidValue();
             }
@@ -43,7 +43,7 @@ class SquareRootUtil {
         do {
             tempResult = result;
             result = (result + (num / tempResult)) / 2;
-        } while ((tempResult - result) != 0);
+        } while((tempResult - result) != 0);
         return result;
     }
 

@@ -9,7 +9,7 @@ class ExponentiationUtil {
         Scanner numInput = new Scanner(System.in);
         Scanner extentInput = new Scanner(System.in);
 
-        while (true) {
+        while(true) {
             // Print menu
             printHead("Exponentiation");
             printBackClose();
@@ -20,7 +20,7 @@ class ExponentiationUtil {
                 String numLine = numInput.nextLine();
 
                 // Do back or close
-                if (backIf(numLine)) break;
+                if(backIf(numLine)) break;
                 closeIf(numLine, numInput);
 
                 // Convert value. Expect NumberFormatException
@@ -31,7 +31,7 @@ class ExponentiationUtil {
                 String extentLine = extentInput.nextLine();
 
                 // Do back or close
-                if (backIf(extentLine)) break;
+                if(backIf(extentLine)) break;
                 closeIf(extentLine, extentInput);
 
                 // Convert value. Expect NumberFormatException
@@ -43,7 +43,7 @@ class ExponentiationUtil {
                 // Set output format and print the result
                 String resultOut = String.format("%s to the extent of %s = %s", numLine, extentLine, result);
                 printResult(resultOut);
-            } catch (NumberFormatException e) {
+            } catch(NumberFormatException e) {
                 // Print message with invalid value on exception
                 printInvalidValue();
             }
@@ -52,7 +52,7 @@ class ExponentiationUtil {
 
     private static double getExponentiation(double num, double extent) {
         double result = 1;
-        for (int i = 1; i <= extent; i++) {
+        for(int i = 1; i <= extent; i++) {
             result *= num;
         }
         return result;

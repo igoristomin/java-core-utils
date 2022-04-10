@@ -8,7 +8,7 @@ class CharAmountUtil {
     static void run() {
         Scanner textInput = new Scanner(System.in);
 
-        while (true) {
+        while(true) {
             // Print menu
             printHead("Chars amount");
             printBackClose();
@@ -18,7 +18,7 @@ class CharAmountUtil {
             String textLine = textInput.nextLine();
 
             // Do back or close
-            if (backIf(textLine)) break;
+            if(backIf(textLine)) break;
             closeIf(textLine, textInput);
 
             // Get results
@@ -44,11 +44,11 @@ class CharAmountUtil {
         text = text.replaceAll("\\s{2,}", " ");
 
         // Return 0 if no chars are entered
-        if (text.length() == 0) return result = 0;
+        if(text.length() == 0) return result = 0;
 
         // Count words
-        for (int i = 0; i < text.length() - 1; i++) {
-            if (text.charAt(i) == ' ' && text.charAt(i+1) != ' ') {
+        for(int i = 0; i < text.length() - 1; i++) {
+            if(text.charAt(i) == ' ' && text.charAt(i+1) != ' ') {
                 result++;
             }
         }

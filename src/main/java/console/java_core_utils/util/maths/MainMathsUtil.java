@@ -10,7 +10,7 @@ public class MainMathsUtil {
         String utilName = "";
         boolean execute = true;
 
-        while (execute) {
+        while(execute) {
             // Print menu
             printHead("Maths utils");
             System.out.println("!average");
@@ -30,7 +30,7 @@ public class MainMathsUtil {
             utilName = printEnterUtil(utilName, utilNameInput);
 
             // Check entered value and perform actions
-            switch (utilName) {
+            switch(utilName) {
                 case "!average":
                     printDoneCase("!average");
                     AverageUtil.run();
@@ -82,7 +82,7 @@ public class MainMathsUtil {
             }
 
             // Do back or close
-            if (backIf(utilName)) break;
+            if(backIf(utilName)) break;
             closeIf(utilName, utilNameInput);
         }
     }

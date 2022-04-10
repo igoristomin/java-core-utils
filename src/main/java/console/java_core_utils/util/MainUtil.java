@@ -12,7 +12,7 @@ public class MainUtil {
         String utilGroup;
         boolean execute = true;
 
-        while (execute) {
+        while(execute) {
             // Print menu
             printHead("Java Core Utils");
             System.out.println("!maths");
@@ -26,7 +26,7 @@ public class MainUtil {
             utilGroup = utilGroupInput.nextLine();
 
             // Check entered value and perform actions
-            switch (utilGroup) {
+            switch(utilGroup) {
                 case "!maths":
                     printDoneCase("!maths");
                     MainMathsUtil.run();
