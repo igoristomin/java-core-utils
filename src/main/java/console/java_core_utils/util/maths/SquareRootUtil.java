@@ -30,7 +30,7 @@ class SquareRootUtil {
                 // Set output format and print the result
                 String resultOut = String.format("Square root of %s = %s", numLine, result);
                 printResult(resultOut);
-            } catch(NumberFormatException e) {
+            } catch(NumberFormatException ex) {
                 // Print message with invalid value on exception
                 printInvalidValue();
             }

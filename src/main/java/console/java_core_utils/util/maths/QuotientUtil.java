@@ -41,7 +41,7 @@ public class QuotientUtil {
                 // Set output format and print the result
                 String resultOut = String.format("Quotient of %s = %s", numsLine, result);
                 printResult(resultOut);
-            } catch(NumberFormatException e) {
+            } catch(NumberFormatException ex) {
                 // Print message with invalid value on exception
                 printInvalidValue();
             }

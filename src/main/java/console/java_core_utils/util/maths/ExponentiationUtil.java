@@ -43,7 +43,7 @@ class ExponentiationUtil {
                 // Set output format and print the result
                 String resultOut = String.format("%s to the extent of %s = %s", numLine, extentLine, result);
                 printResult(resultOut);
-            } catch(NumberFormatException e) {
+            } catch(NumberFormatException ex) {
                 // Print message with invalid value on exception
                 printInvalidValue();
             }
