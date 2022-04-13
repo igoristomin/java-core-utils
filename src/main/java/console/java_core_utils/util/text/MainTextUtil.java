@@ -29,7 +29,7 @@ public class MainTextUtil {
                     break;
                 case "!chars-replacement":
                     printDoneCase("!chars-replacement");
-                    CharReplacementUtil.run();
+                    CharsReplacementUtil.run();
                     break;
                 case COMMAND_BACK:
                 case COMMAND_CLOSE:
