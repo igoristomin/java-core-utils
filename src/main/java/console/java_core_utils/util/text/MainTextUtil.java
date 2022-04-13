@@ -28,7 +28,7 @@ public class MainTextUtil {
                     CharAmountUtil.run();
                     break;
                 case "!chars-replacement":
-                    printDoneCase("!char-replacement");
+                    printDoneCase("!chars-replacement");
                     CharReplacementUtil.run();
                     break;
                 case COMMAND_BACK:
