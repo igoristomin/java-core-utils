@@ -12,7 +12,7 @@ class CharsReplacementUtil {
 
         while(true) {
             // Print menu
-            printHead("Char replacement");
+            printHead("Chars replacement");
             printBackClose();
 
             // Get String value
