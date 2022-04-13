@@ -3,7 +3,7 @@ package console.java_core_utils.util.text;
 import java.util.Scanner;
 import static console.java_core_utils.util.PrintUtil.*;
 
-class CharAmountUtil {
+class CharsAmountUtil {
 
     static void run() {
         Scanner textInput = new Scanner(System.in);

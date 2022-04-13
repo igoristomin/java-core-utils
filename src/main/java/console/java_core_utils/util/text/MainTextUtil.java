@@ -25,7 +25,7 @@ public class MainTextUtil {
             switch(utilName) {
                 case "!chars-amount":
                     printDoneCase("!chars-amount");
-                    CharAmountUtil.run();
+                    CharsAmountUtil.run();
                     break;
                 case "!chars-replacement":
                     printDoneCase("!chars-replacement");
