@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class PrintUtil {
 
-    public static final String COMMAND_BACK = "!back";
+    public static final String CMD_BACK = "!back";
     public static final String COMMAND_CLOSE = "!close";
     public static final DecimalFormat DF = new DecimalFormat("0.###");
 
@@ -25,14 +25,14 @@ public class PrintUtil {
     }
 
     public static void printBackClose() {
-        System.out.print(COMMAND_BACK + " | ");
+        System.out.print(CMD_BACK + " | ");
         System.out.println(COMMAND_CLOSE);
         printBorder("thin");
     }
 
     public static boolean backIf(String value) {
-        if(value.equals(COMMAND_BACK)) {
-            System.out.println("Done " + COMMAND_BACK);
+        if(value.equals(CMD_BACK)) {
+            System.out.println("Done " + CMD_BACK);
             printBorder("fat");
             return true;
         }

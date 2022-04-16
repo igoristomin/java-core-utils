@@ -31,7 +31,7 @@ public class MainTextUtil {
                     printDoneCase("!chars-replacement");
                     CharsReplacementUtil.run();
                     break;
-                case COMMAND_BACK:
+                case CMD_BACK:
                 case COMMAND_CLOSE:
                     execute = false;
                     break;
