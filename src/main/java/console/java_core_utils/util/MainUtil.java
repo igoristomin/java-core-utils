@@ -18,7 +18,7 @@ public class MainUtil {
             System.out.println("!maths");
             System.out.println("!text");
             printBorder("thin");
-            System.out.println(COMMAND_CLOSE);
+            System.out.println(CMD_CLOSE);
             printBorder("thin");
 
             // Get String value
@@ -35,7 +35,7 @@ public class MainUtil {
                     printDoneCase("!text");
                     MainTextUtil.run();
                     break;
-                case COMMAND_CLOSE:
+                case CMD_CLOSE:
                     execute = false;
                     break;
                 default:

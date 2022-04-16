@@ -32,7 +32,7 @@ public class MainTextUtil {
                     CharsReplacementUtil.run();
                     break;
                 case CMD_BACK:
-                case COMMAND_CLOSE:
+                case CMD_CLOSE:
                     execute = false;
                     break;
                 default:

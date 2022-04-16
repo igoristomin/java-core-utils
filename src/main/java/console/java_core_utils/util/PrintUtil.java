@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class PrintUtil {
 
     public static final String CMD_BACK = "!back";
-    public static final String COMMAND_CLOSE = "!close";
+    public static final String CMD_CLOSE = "!close";
     public static final DecimalFormat DF = new DecimalFormat("0.###");
 
     public static void printHead(String text) {
@@ -26,7 +26,7 @@ public class PrintUtil {
 
     public static void printBackClose() {
         System.out.print(CMD_BACK + " | ");
-        System.out.println(COMMAND_CLOSE);
+        System.out.println(CMD_CLOSE);
         printBorder("thin");
     }
 
@@ -40,8 +40,8 @@ public class PrintUtil {
     }
 
     public static void closeIf(String value, Scanner valueInput) {
-        if(value.equals(COMMAND_CLOSE)) {
-            System.out.println("Done " + COMMAND_CLOSE);
+        if(value.equals(CMD_CLOSE)) {
+            System.out.println("Done " + CMD_CLOSE);
             printBorder("fat");
             valueInput.close();
             System.exit(0);
