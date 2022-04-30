@@ -22,6 +22,3 @@ Collection of utilities containing mathematical and textual operations using onl
 * Date of release: 2 January 2022
 * Date of last update: 16 April 2022
 * Current version: 1.7
-
----
-Author [Igor Istomin](https://github.com/igoristomin)
