@@ -13,7 +13,7 @@ public class MainUtil {
         boolean execute = true;
 
         while(execute) {
-            // Print menu
+            // Print the menu
             printHead("Java Core Utils");
             System.out.println("!maths");
             System.out.println("!text");
@@ -22,10 +22,10 @@ public class MainUtil {
             printBorder("thin");
 
             // Get String value
-            System.out.print("Enter util group: ");
+            System.out.print("Enter a group of utils: ");
             utilGroup = utilGroupInput.nextLine();
 
-            // Check entered value and perform actions
+            // Check the entered value and perform the following actions
             switch(utilGroup) {
                 case "!maths":
                     printDoneCase("!maths");
@@ -39,7 +39,7 @@ public class MainUtil {
                     execute = false;
                     break;
                 default:
-                    // Print message with invalid value
+                    // Print a message with an invalid value
                     printInvalidValue();
                     break;
             }

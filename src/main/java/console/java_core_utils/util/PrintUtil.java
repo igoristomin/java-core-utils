@@ -14,7 +14,7 @@ public class PrintUtil {
     }
 
     public static String printEnterUtil(String utilName, Scanner utilNameInput) {
-        System.out.print("Enter util: ");
+        System.out.print("Enter the util: ");
         utilName = utilNameInput.nextLine();
         return utilName;
     }
@@ -60,15 +60,15 @@ public class PrintUtil {
     }
 
     public static void printEnterNum() {
-        System.out.print("Enter number: ");
+        System.out.print("Enter a number: ");
     }
 
     public static void printEnterNums() {
-        System.out.print("Enter numbers separated by commas: ");
+        System.out.print("Enter comma-separated numbers: ");
     }
 
     public static void printEnterText() {
-        System.out.print("Enter text: ");
+        System.out.print("Enter the text: ");
     }
 
     public static void printResult(String resultOut) {

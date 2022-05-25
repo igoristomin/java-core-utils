@@ -10,19 +10,19 @@ public class SumUtil {
         Scanner numsInput = new Scanner(System.in);
 
         while(true) {
-            // Print menu
+            // Print the menu
             printHead("Sum");
             printBackClose();
 
             // Get String value
             printEnterNums();
-            String numsLine = numsInput.nextLine(); // Set numsInput to String numsLine
+            String numsLine = numsInput.nextLine();
 
             // Do back or close
             if(backIf(numsLine)) break;
             closeIf(numsLine, numsInput);
 
-            // Convert String value to String[] array
+            // Convert String value to String array
             String[] numsLineSplit = numsLine
                     .replaceAll("\\s", "")
                     .split(",");
@@ -30,19 +30,19 @@ public class SumUtil {
             double[] nums = new double[numsLineSplit.length];
 
             try {
-                // Convert String[] array to double[] array
+                // Convert String array to double array
                 for(int i = 0; i < numsLineSplit.length; i++) {
                     nums[i] = Double.parseDouble(numsLineSplit[i]);
                 }
 
-                // Get and format result from method
+                // Get and format the result from the method
                 String result = DF.format(getSum(nums));
 
-                // Set output format and print the result
+                // Set the output format and print the result
                 String resultOut = String.format("Sum of %s = %s", numsLine, result);
                 printResult(resultOut);
             } catch(NumberFormatException ex) {
-                // Print message with invalid value on exception
+                // Print a message with an invalid value on exception
                 printInvalidValue();
             }
         }

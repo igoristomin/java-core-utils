@@ -11,7 +11,7 @@ class CharsReplacementUtil {
         Scanner charsReplInput = new Scanner(System.in);
 
         while(true) {
-            // Print menu
+            // Print the menu
             printHead("Chars replacement");
             printBackClose();
 
@@ -37,10 +37,10 @@ class CharsReplacementUtil {
             if(backIf(charsReplLine)) break;
             closeIf(charsReplLine, charsReplInput);
 
-            // Get result
+            // Get the result
             String result = textLine.replace(charsLine, charsReplLine);
 
-            // Set output format and print the result
+            // Set the output format and print the result
             String resultOut = String.format("Replacement result: %s", result);
             printResult(resultOut);
         }

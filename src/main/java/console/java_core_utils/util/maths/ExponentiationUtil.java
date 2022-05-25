@@ -10,7 +10,7 @@ class ExponentiationUtil {
         Scanner extentInput = new Scanner(System.in);
 
         while(true) {
-            // Print menu
+            // Print the menu
             printHead("Exponentiation");
             printBackClose();
 
@@ -23,7 +23,7 @@ class ExponentiationUtil {
                 if(backIf(numLine)) break;
                 closeIf(numLine, numInput);
 
-                // Convert value. Expect NumberFormatException
+                // Convert the value. Expect NumberFormatException
                 double num = Double.parseDouble(numLine);
 
                 // Get String value
@@ -34,17 +34,17 @@ class ExponentiationUtil {
                 if(backIf(extentLine)) break;
                 closeIf(extentLine, extentInput);
 
-                // Convert value. Expect NumberFormatException
+                // Convert the value. Expect NumberFormatException
                 double extent = Double.parseDouble(extentLine);
 
-                // Get and format result from method
+                // Get and format the result from the method
                 String result = DF.format(getExponentiation(num, extent));
 
-                // Set output format and print the result
+                // Set the output format and print the result
                 String resultOut = String.format("%s to the extent of %s = %s", numLine, extentLine, result);
                 printResult(resultOut);
             } catch(NumberFormatException ex) {
-                // Print message with invalid value on exception
+                // Print a message with an invalid value on exception
                 printInvalidValue();
             }
         }

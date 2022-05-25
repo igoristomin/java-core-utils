@@ -11,7 +11,7 @@ public class MainMathsUtil {
         boolean execute = true;
 
         while(execute) {
-            // Print menu
+            // Print the menu
             printHead("Maths utils");
             System.out.println("!average");
             System.out.println("!composition");
@@ -29,7 +29,7 @@ public class MainMathsUtil {
             // Get String value
             utilName = printEnterUtil(utilName, utilNameInput);
 
-            // Check entered value and perform actions
+            // Check the entered value and perform the following actions
             switch(utilName) {
                 case "!average":
                     printDoneCase("!average");
@@ -76,7 +76,7 @@ public class MainMathsUtil {
                     execute = false;
                     break;
                 default:
-                    // Print message with invalid value
+                    // Print a message with an invalid value
                     printInvalidValue();
                     break;
             }

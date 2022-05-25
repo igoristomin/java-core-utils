@@ -10,7 +10,7 @@ class SquareRootUtil {
         Scanner numInput = new Scanner(System.in);
 
         while(true) {
-            // Print menu
+            // Print the menu
             printHead("Square root");
             printBackClose();
 
@@ -23,15 +23,15 @@ class SquareRootUtil {
             closeIf(numLine, numInput);
 
             try {
-                // Convert values and get, format result from method
+                // Convert and get values, format the result from the method
                 double num = Double.parseDouble(numLine);
                 String result = DF.format(getRoot(num));
 
-                // Set output format and print the result
+                // Set the output format and print the result
                 String resultOut = String.format("Square root of %s = %s", numLine, result);
                 printResult(resultOut);
             } catch(NumberFormatException ex) {
-                // Print message with invalid value on exception
+                // Print a message with an invalid value on exception
                 printInvalidValue();
             }
         }

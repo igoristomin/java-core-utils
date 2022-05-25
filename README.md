@@ -1,7 +1,7 @@
 # Java Core Utils
 
 ## Description
-Collection of utilities containing mathematical and textual operations using only Java Core.
+A set of utilities containing mathematical and textual operations using only Java Core.
 
 ## Used tools
 * Platform: Spring Boot 2.6.1
@@ -12,10 +12,10 @@ Collection of utilities containing mathematical and textual operations using onl
 * Builder configuration: /build.gradle
 
 ## Backend schema
-![Element relationships](readme/back-schema.svg)
+![Relationships of elements](readme/back-schema.svg)
 
 ## Installation
-1. Run this project in development environment
+1. Run this project in a development environment
 
 ## Release notes
 * Project type: Console application

@@ -10,7 +10,7 @@ class DifferenceUtil {
         Scanner numsInput = new Scanner(System.in);
 
         while(true) {
-            // Print menu
+            // Print the menu
             printHead("Difference");
             printBackClose();
 
@@ -22,7 +22,7 @@ class DifferenceUtil {
             if(backIf(numsLine)) break;
             closeIf(numsLine, numsInput);
 
-            // Convert String value to String[] array
+            // Convert String value to String array
             String[] numsLineSplit = numsLine
                     .replaceAll("\\s", "")
                     .split(",");
@@ -30,19 +30,19 @@ class DifferenceUtil {
             double[] nums = new double[numsLineSplit.length];
 
             try {
-                // Convert String[] array to double[] array
+                // Convert String array to double array
                 for(int i = 0; i < numsLineSplit.length; i++) {
                     nums[i] = Double.parseDouble(numsLineSplit[i]);
                 }
 
-                // Get and format result from method
+                // Get and format the result from the method
                 String result = DF.format(getDifference(nums));
 
-                // Set output format and print the result
+                // Set the output format and print the result
                 String resultOut = String.format("Difference of %s = %s", numsLine, result);
                 printResult(resultOut);
             } catch(NumberFormatException ex) {
-                // Print message with invalid value on exception
+                // Print a message with an invalid value on exception
                 printInvalidValue();
             }
         }

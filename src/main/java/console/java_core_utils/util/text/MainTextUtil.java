@@ -11,7 +11,7 @@ public class MainTextUtil {
         boolean execute = true;
 
         while(execute) {
-            // Print menu
+            // Print the menu
             printHead("Text utils");
             System.out.println("!chars-amount");
             System.out.println("!chars-replacement");
@@ -21,7 +21,7 @@ public class MainTextUtil {
             // Get String value
             utilName = printEnterUtil(utilName, utilNameInput);
 
-            // Check entered value and perform actions
+            // Check the entered value and perform the following actions
             switch(utilName) {
                 case "!chars-amount":
                     printDoneCase("!chars-amount");
@@ -36,7 +36,7 @@ public class MainTextUtil {
                     execute = false;
                     break;
                 default:
-                    // Print message with invalid value
+                    // Print a message with an invalid value
                     printInvalidValue();
                     break;
             }

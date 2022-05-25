@@ -9,7 +9,7 @@ class CharsAmountUtil {
         Scanner textInput = new Scanner(System.in);
 
         while(true) {
-            // Print menu
+            // Print the menu
             printHead("Chars amount");
             printBackClose();
 
@@ -21,13 +21,13 @@ class CharsAmountUtil {
             if(backIf(textLine)) break;
             closeIf(textLine, textInput);
 
-            // Get results
+            // Get the results
             int charAmount = textLine.length();
             int charNoSpace = textLine.replaceAll("\\s", "").length();
             int charNoSpacePm = textLine.replaceAll("\\s|\\p{Punct}", "").length();
             int wordAmount = getWordAmount(textLine);
 
-            // Print results
+            // Print the results
             System.out.println("Chars amount = " + charAmount);
             System.out.println("Without spaces = " + charNoSpace);
             System.out.println("Without spaces and punctuation marks = " + charNoSpacePm);
@@ -43,7 +43,7 @@ class CharsAmountUtil {
         text = text.replaceAll("^[\\s]+", "");
         text = text.replaceAll("\\s{2,}", " ");
 
-        // Return 0 if no chars are entered
+        // Return 0 if no characters are entered
         if(text.length() == 0) return result = 0;
 
         // Count words
