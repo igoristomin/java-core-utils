@@ -20,5 +20,5 @@ A set of utilities containing mathematical and textual operations using only Jav
 ## Release notes
 * Project type: Console application
 * Date of release: 2 January 2022
-* Date of last update: 30 April 2022
-* Current version: 1.8
+* Date of last update: 25 May 2022
+* Current version: 1.9
