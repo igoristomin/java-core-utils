@@ -48,7 +48,7 @@ class CharsAmountUtil {
 
         // Count words
         for(int i = 0; i < text.length() - 1; i++) {
-            if(text.charAt(i) == ' ' && text.charAt(i+1) != ' ') {
+            if(text.charAt(i) == ' ' && text.charAt(i + 1) != ' ') {
                 result++;
             }
         }
