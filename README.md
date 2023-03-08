@@ -6,7 +6,7 @@ A set of utilities containing mathematical and textual operations using only Jav
 ## Used tools
 * Platform: Spring Boot 2.6.1
 * Builder: Gradle
-* Languages: Java 8 (JDK 8)
+* Languages: Java 8
 
 ## Important files
 * Builder configuration: /build.gradle
