@@ -1,4 +1,4 @@
-package console.java_core_utils.util;
+package console.javacoreutils.util;
 
 import java.text.DecimalFormat;
 import java.util.Scanner;

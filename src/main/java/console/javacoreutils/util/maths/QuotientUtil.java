@@ -1,17 +1,17 @@
-package console.java_core_utils.util.maths;
+package console.javacoreutils.util.maths;
 
 import java.util.Scanner;
-import static console.java_core_utils.util.PrintUtil.*;
-import static console.java_core_utils.util.PrintUtil.printInvalidValue;
+import static console.javacoreutils.util.PrintUtil.*;
+import static console.javacoreutils.util.PrintUtil.printInvalidValue;
 
-class LessUtil {
+public class QuotientUtil {
 
     static void run() {
         Scanner numsInput = new Scanner(System.in);
 
         while(true) {
             // Print the menu
-            printHead("Less");
+            printHead("Quotient");
             printBackClose();
 
             // Get String value
@@ -36,10 +36,10 @@ class LessUtil {
                 }
 
                 // Get and format the result from the method
-                String result = DF.format(getLess(nums));
+                String result = DF.format(getQuotient(nums));
 
                 // Set the output format and print the result
-                String resultOut = String.format("Less of %s = %s", numsLine, result);
+                String resultOut = String.format("Quotient of %s = %s", numsLine, result);
                 printResult(resultOut);
             } catch(NumberFormatException ex) {
                 // Print a message with an invalid value on exception
@@ -48,10 +48,10 @@ class LessUtil {
         }
     }
 
-    private static double getLess(double[] nums) {
+    private static double getQuotient(double[] nums) {
         double result = nums[0];
         for(int i = 1; i < nums.length; i++) {
-            if(result > nums[i]) result = nums[i];
+            result /= nums[i];
         }
         return result;
     }

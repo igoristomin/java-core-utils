@@ -1,17 +1,17 @@
-package console.java_core_utils.util.maths;
+package console.javacoreutils.util.maths;
 
 import java.util.Scanner;
-import static console.java_core_utils.util.PrintUtil.*;
-import static console.java_core_utils.util.PrintUtil.printInvalidValue;
+import static console.javacoreutils.util.PrintUtil.*;
+import static console.javacoreutils.util.PrintUtil.printInvalidValue;
 
-class DifferenceUtil {
+public class CompositionUtil {
 
     static void run() {
         Scanner numsInput = new Scanner(System.in);
 
         while(true) {
             // Print the menu
-            printHead("Difference");
+            printHead("Composition");
             printBackClose();
 
             // Get String value
@@ -36,10 +36,10 @@ class DifferenceUtil {
                 }
 
                 // Get and format the result from the method
-                String result = DF.format(getDifference(nums));
+                String result = DF.format(getComposition(nums));
 
                 // Set the output format and print the result
-                String resultOut = String.format("Difference of %s = %s", numsLine, result);
+                String resultOut = String.format("Composition of %s = %s", numsLine, result);
                 printResult(resultOut);
             } catch(NumberFormatException ex) {
                 // Print a message with an invalid value on exception
@@ -48,10 +48,10 @@ class DifferenceUtil {
         }
     }
 
-    private static double getDifference(double[] nums) {
-        double result = nums[0];
-        for(int i = 1; i < nums.length; i++) {
-            result -= nums[i];
+    private static double getComposition(double[] nums) {
+        double result = 1;
+        for(double num : nums) {
+            result *= num;
         }
         return result;
     }

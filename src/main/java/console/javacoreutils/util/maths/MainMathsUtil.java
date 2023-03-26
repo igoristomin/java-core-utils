@@ -1,7 +1,7 @@
-package console.java_core_utils.util.maths;
+package console.javacoreutils.util.maths;
 
 import java.util.Scanner;
-import static console.java_core_utils.util.PrintUtil.*;
+import static console.javacoreutils.util.PrintUtil.*;
 
 public class MainMathsUtil {
 

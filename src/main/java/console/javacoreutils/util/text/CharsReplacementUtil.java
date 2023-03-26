@@ -1,7 +1,7 @@
-package console.java_core_utils.util.text;
+package console.javacoreutils.util.text;
 
 import java.util.Scanner;
-import static console.java_core_utils.util.PrintUtil.*;
+import static console.javacoreutils.util.PrintUtil.*;
 
 class CharsReplacementUtil {
 

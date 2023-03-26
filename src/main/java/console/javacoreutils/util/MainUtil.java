@@ -1,9 +1,9 @@
-package console.java_core_utils.util;
+package console.javacoreutils.util;
 
-import console.java_core_utils.util.maths.MainMathsUtil;
-import console.java_core_utils.util.text.MainTextUtil;
+import console.javacoreutils.util.maths.MainMathsUtil;
+import console.javacoreutils.util.text.MainTextUtil;
 import java.util.Scanner;
-import static console.java_core_utils.util.PrintUtil.*;
+import static console.javacoreutils.util.PrintUtil.*;
 
 public class MainUtil {
 
