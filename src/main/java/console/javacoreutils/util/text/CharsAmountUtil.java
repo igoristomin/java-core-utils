@@ -6,7 +6,7 @@ import static console.javacoreutils.util.PrintUtil.*;
 class CharsAmountUtil {
 
     static void run() {
-        Scanner textInput = new Scanner(System.in);
+        Scanner textInput = new Scanner(System.in, "UTF-8");
 
         while(true) {
             // Print the menu
