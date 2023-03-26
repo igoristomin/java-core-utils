@@ -40,10 +40,12 @@ class SquareRootUtil {
     private static double getRoot(double num) {
         double tempResult, result;
         result = num / 2;
+
         do {
             tempResult = result;
             result = (result + (num / tempResult)) / 2;
         } while((tempResult - result) != 0);
+
         return result;
     }
 
