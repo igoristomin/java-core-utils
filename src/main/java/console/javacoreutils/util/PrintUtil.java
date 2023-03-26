@@ -1,8 +1,10 @@
 package console.javacoreutils.util;
 
+import org.springframework.stereotype.Service;
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
+@Service
 public class PrintUtil {
 
     public static final String CMD_BACK = "!back";

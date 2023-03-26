@@ -1,8 +1,10 @@
 package console.javacoreutils.util.text;
 
+import org.springframework.stereotype.Service;
 import java.util.Scanner;
 import static console.javacoreutils.util.PrintUtil.*;
 
+@Service
 public class MainTextUtil {
 
     public static void run() {

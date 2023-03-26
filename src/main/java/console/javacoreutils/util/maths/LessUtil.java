@@ -1,9 +1,11 @@
 package console.javacoreutils.util.maths;
 
+import org.springframework.stereotype.Service;
 import java.util.Scanner;
 import static console.javacoreutils.util.PrintUtil.*;
 import static console.javacoreutils.util.PrintUtil.printInvalidValue;
 
+@Service
 class LessUtil {
 
     static void run() {

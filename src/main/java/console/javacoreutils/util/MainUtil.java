@@ -2,9 +2,11 @@ package console.javacoreutils.util;
 
 import console.javacoreutils.util.maths.MainMathsUtil;
 import console.javacoreutils.util.text.MainTextUtil;
+import org.springframework.stereotype.Service;
 import java.util.Scanner;
 import static console.javacoreutils.util.PrintUtil.*;
 
+@Service
 public class MainUtil {
 
     public static void run() {

@@ -1,8 +1,10 @@
 package console.javacoreutils.util.maths;
 
+import org.springframework.stereotype.Service;
 import java.util.Scanner;
 import static console.javacoreutils.util.PrintUtil.*;
 
+@Service
 class FactorialUtil {
 
     static void run() {
