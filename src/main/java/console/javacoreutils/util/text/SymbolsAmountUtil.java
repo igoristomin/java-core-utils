@@ -3,14 +3,14 @@ package console.javacoreutils.util.text;
 import java.util.Scanner;
 import static console.javacoreutils.util.PrintUtil.*;
 
-class CharsAmountUtil {
+class SymbolsAmountUtil {
 
     static void run() {
         Scanner textInput = new Scanner(System.in, "UTF-8");
 
         while(true) {
             // Print the menu
-            printHead("Chars amount");
+            printHead("Symbols amount");
             printBackClose();
 
             // Get String value
@@ -22,28 +22,28 @@ class CharsAmountUtil {
             closeIf(textLine, textInput);
 
             // Get the results
-            int charAmount = textLine.length();
-            int charNoSpace = textLine.replaceAll("\\s", "").length();
-            int charNoSpacePm = textLine.replaceAll("\\s|\\p{Punct}", "").length();
-            int wordAmount = getWordAmount(textLine);
+            int symbolsAmount = textLine.length();
+            int symbolsNoSpaces = textLine.replaceAll("\\s", "").length();
+            int symbolsNoSpacesPunctMarks = textLine.replaceAll("\\s|\\p{Punct}", "").length();
+            int wordsAmount = getWordsAmount(textLine);
 
             // Print the results
-            System.out.println("Chars amount = " + charAmount);
-            System.out.println("Without spaces = " + charNoSpace);
-            System.out.println("Without spaces and punctuation marks = " + charNoSpacePm);
-            System.out.println("Words amount = " + wordAmount);
+            System.out.println("Symbols amount = " + symbolsAmount);
+            System.out.println("Without spaces = " + symbolsNoSpaces);
+            System.out.println("Without spaces and punctuation marks = " + symbolsNoSpacesPunctMarks);
+            System.out.println("Words amount = " + wordsAmount);
             printBorder("fat");
         }
     }
 
-    private static int getWordAmount(String text) {
+    private static int getWordsAmount(String text) {
         int result = 1;
 
         // Delete extra spaces
         text = text.replaceAll("^[\\s]+", "");
         text = text.replaceAll("\\s{2,}", " ");
 
-        // Return 0 if no characters are entered
+        // Return 0 if no symbols are entered
         if(text.length() == 0) return result = 0;
 
         // Count words

@@ -13,8 +13,8 @@ public class MainTextUtil {
         while(execute) {
             // Print the menu
             printHead("Text utils");
-            System.out.println("!chars-amount");
-            System.out.println("!chars-replacement");
+            System.out.println("!symbols-amount");
+            System.out.println("!symbols-replacement");
             printBorder("thin");
             printBackClose();
 
@@ -23,13 +23,13 @@ public class MainTextUtil {
 
             // Check the entered value and perform the following actions
             switch(utilName) {
-                case "!chars-amount":
-                    printDoneCase("!chars-amount");
-                    CharsAmountUtil.run();
+                case "!symbols-amount":
+                    printDoneCase("!symbols-amount");
+                    SymbolsAmountUtil.run();
                     break;
-                case "!chars-replacement":
-                    printDoneCase("!chars-replacement");
-                    CharsReplacementUtil.run();
+                case "!symbols-replacement":
+                    printDoneCase("!symbols-replacement");
+                    SymbolsReplacementUtil.run();
                     break;
                 case CMD_BACK:
                 case CMD_CLOSE:

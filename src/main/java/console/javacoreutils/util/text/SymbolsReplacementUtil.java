@@ -3,16 +3,16 @@ package console.javacoreutils.util.text;
 import java.util.Scanner;
 import static console.javacoreutils.util.PrintUtil.*;
 
-class CharsReplacementUtil {
+class SymbolsReplacementUtil {
 
     static void run() {
         Scanner textInput = new Scanner(System.in);
-        Scanner charsInput = new Scanner(System.in);
-        Scanner charsReplInput = new Scanner(System.in);
+        Scanner symbolsInput = new Scanner(System.in);
+        Scanner symbolsReplInput = new Scanner(System.in);
 
         while(true) {
             // Print the menu
-            printHead("Chars replacement");
+            printHead("Symbols replacement");
             printBackClose();
 
             // Get String value
@@ -23,22 +23,22 @@ class CharsReplacementUtil {
             if(backIf(textLine)) break;
             closeIf(textLine, textInput);
 
-            System.out.print("Enter chars: ");
-            String charsLine = charsInput.nextLine();
+            System.out.print("Enter symbols: ");
+            String symbolsLine = symbolsInput.nextLine();
 
             // Do back or close
-            if(backIf(charsLine)) break;
-            closeIf(charsLine, charsInput);
+            if(backIf(symbolsLine)) break;
+            closeIf(symbolsLine, symbolsInput);
 
-            System.out.print("Enter replacement chars: ");
-            String charsReplLine = charsReplInput.nextLine();
+            System.out.print("Enter replacement symbols: ");
+            String symbolsReplLine = symbolsReplInput.nextLine();
 
             // Do back or close
-            if(backIf(charsReplLine)) break;
-            closeIf(charsReplLine, charsReplInput);
+            if(backIf(symbolsReplLine)) break;
+            closeIf(symbolsReplLine, symbolsReplInput);
 
             // Get the result
-            String result = textLine.replace(charsLine, charsReplLine);
+            String result = textLine.replace(symbolsLine, symbolsReplLine);
 
             // Set the output format and print the result
             String resultOut = String.format("Replacement result: %s", result);
