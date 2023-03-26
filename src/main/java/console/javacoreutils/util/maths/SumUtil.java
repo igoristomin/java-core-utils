@@ -4,7 +4,7 @@ import java.util.Scanner;
 import static console.javacoreutils.util.PrintUtil.*;
 import static console.javacoreutils.util.PrintUtil.printInvalidValue;
 
-public class SumUtil {
+class SumUtil {
 
     static void run() {
         Scanner numsInput = new Scanner(System.in);
