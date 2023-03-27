@@ -1,6 +1,6 @@
-package console.javacoreutils;
+package igoristomin.javacoreutils;
 
-import console.javacoreutils.util.MainUtil;
+import igoristomin.javacoreutils.util.MainUtil;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

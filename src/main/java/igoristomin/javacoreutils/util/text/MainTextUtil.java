@@ -1,8 +1,8 @@
-package console.javacoreutils.util.text;
+package igoristomin.javacoreutils.util.text;
 
+import igoristomin.javacoreutils.util.PrintUtil;
 import org.springframework.stereotype.Service;
 import java.util.Scanner;
-import static console.javacoreutils.util.PrintUtil.*;
 
 @Service
 public class MainTextUtil {
@@ -14,38 +14,38 @@ public class MainTextUtil {
 
         while(execute) {
             // Print the menu
-            printHead("Text utils");
+            PrintUtil.printHead("Text utils");
             System.out.println("!symbols-amount");
             System.out.println("!symbols-replacement");
-            printBorder("thin");
-            printBackClose();
+            PrintUtil.printBorder("thin");
+            PrintUtil.printBackClose();
 
             // Get String value
-            utilName = printEnterUtil(utilName, utilNameInput);
+            utilName = PrintUtil.printEnterUtil(utilName, utilNameInput);
 
             // Check the entered value and perform the following actions
             switch(utilName) {
                 case "!symbols-amount":
-                    printDoneCase("!symbols-amount");
+                    PrintUtil.printDoneCase("!symbols-amount");
                     SymbolsAmountUtil.run();
                     break;
                 case "!symbols-replacement":
-                    printDoneCase("!symbols-replacement");
+                    PrintUtil.printDoneCase("!symbols-replacement");
                     SymbolsReplacementUtil.run();
                     break;
-                case CMD_BACK:
-                case CMD_CLOSE:
+                case PrintUtil.CMD_BACK:
+                case PrintUtil.CMD_CLOSE:
                     execute = false;
                     break;
                 default:
                     // Print a message with an invalid value
-                    printInvalidValue();
+                    PrintUtil.printInvalidValue();
                     break;
             }
 
             // Do back or close
-            if(backIf(utilName)) break;
-            closeIf(utilName, utilNameInput);
+            if(PrintUtil.backIf(utilName)) break;
+            PrintUtil.closeIf(utilName, utilNameInput);
         }
     }
 

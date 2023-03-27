@@ -1,4 +1,4 @@
-package console.javacoreutils;
+package igoristomin.javacoreutils;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

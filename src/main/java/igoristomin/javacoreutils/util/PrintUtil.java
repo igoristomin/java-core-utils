@@ -1,4 +1,4 @@
-package console.javacoreutils.util;
+package igoristomin.javacoreutils.util;
 
 import org.springframework.stereotype.Service;
 import java.text.DecimalFormat;

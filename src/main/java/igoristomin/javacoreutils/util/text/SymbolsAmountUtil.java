@@ -1,8 +1,8 @@
-package console.javacoreutils.util.text;
+package igoristomin.javacoreutils.util.text;
 
+import igoristomin.javacoreutils.util.PrintUtil;
 import org.springframework.stereotype.Service;
 import java.util.Scanner;
-import static console.javacoreutils.util.PrintUtil.*;
 
 @Service
 class SymbolsAmountUtil {
@@ -12,16 +12,16 @@ class SymbolsAmountUtil {
 
         while(true) {
             // Print the menu
-            printHead("Symbols amount");
-            printBackClose();
+            PrintUtil.printHead("Symbols amount");
+            PrintUtil.printBackClose();
 
             // Get String value
-            printEnterText();
+            PrintUtil.printEnterText();
             String textLine = textInput.nextLine();
 
             // Do back or close
-            if(backIf(textLine)) break;
-            closeIf(textLine, textInput);
+            if(PrintUtil.backIf(textLine)) break;
+            PrintUtil.closeIf(textLine, textInput);
 
             // Get the results
             int symbolsAmount = textLine.length();
@@ -34,7 +34,7 @@ class SymbolsAmountUtil {
             System.out.println("Without spaces = " + symbolsNoSpaces);
             System.out.println("Without spaces and punctuation marks = " + symbolsNoSpacesPunctMarks);
             System.out.println("Words amount = " + wordsAmount);
-            printBorder("fat");
+            PrintUtil.printBorder("fat");
         }
     }
 

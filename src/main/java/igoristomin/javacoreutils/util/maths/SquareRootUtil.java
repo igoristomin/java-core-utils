@@ -1,9 +1,8 @@
-package console.javacoreutils.util.maths;
+package igoristomin.javacoreutils.util.maths;
 
+import igoristomin.javacoreutils.util.PrintUtil;
 import org.springframework.stereotype.Service;
 import java.util.Scanner;
-import static console.javacoreutils.util.PrintUtil.*;
-import static console.javacoreutils.util.PrintUtil.printInvalidValue;
 
 @Service
 class SquareRootUtil {
@@ -13,28 +12,28 @@ class SquareRootUtil {
 
         while(true) {
             // Print the menu
-            printHead("Square root");
-            printBackClose();
+            PrintUtil.printHead("Square root");
+            PrintUtil.printBackClose();
 
             // Get String value
-            printEnterNum();
+            PrintUtil.printEnterNum();
             String numLine = numInput.nextLine();
 
             // Do back or close
-            if(backIf(numLine)) break;
-            closeIf(numLine, numInput);
+            if(PrintUtil.backIf(numLine)) break;
+            PrintUtil.closeIf(numLine, numInput);
 
             try {
                 // Convert and get values, format the result from the method
                 double num = Double.parseDouble(numLine);
-                String result = DF.format(getRoot(num));
+                String result = PrintUtil.DF.format(getRoot(num));
 
                 // Set the output format and print the result
                 String resultOut = String.format("Square root of %s = %s", numLine, result);
-                printResult(resultOut);
+                PrintUtil.printResult(resultOut);
             } catch(NumberFormatException ex) {
                 // Print a message with an invalid value on exception
-                printInvalidValue();
+                PrintUtil.printInvalidValue();
             }
         }
     }

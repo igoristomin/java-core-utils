@@ -1,8 +1,8 @@
-package console.javacoreutils.util.maths;
+package igoristomin.javacoreutils.util.maths;
 
+import igoristomin.javacoreutils.util.PrintUtil;
 import org.springframework.stereotype.Service;
 import java.util.Scanner;
-import static console.javacoreutils.util.PrintUtil.*;
 
 @Service
 class ExponentiationUtil {
@@ -13,17 +13,17 @@ class ExponentiationUtil {
 
         while(true) {
             // Print the menu
-            printHead("Exponentiation");
-            printBackClose();
+            PrintUtil.printHead("Exponentiation");
+            PrintUtil.printBackClose();
 
             try {
                 // Get String value
-                printEnterNum();
+                PrintUtil.printEnterNum();
                 String numLine = numInput.nextLine();
 
                 // Do back or close
-                if(backIf(numLine)) break;
-                closeIf(numLine, numInput);
+                if(PrintUtil.backIf(numLine)) break;
+                PrintUtil.closeIf(numLine, numInput);
 
                 // Convert the value. Expect NumberFormatException
                 double num = Double.parseDouble(numLine);
@@ -33,21 +33,21 @@ class ExponentiationUtil {
                 String extentLine = extentInput.nextLine();
 
                 // Do back or close
-                if(backIf(extentLine)) break;
-                closeIf(extentLine, extentInput);
+                if(PrintUtil.backIf(extentLine)) break;
+                PrintUtil.closeIf(extentLine, extentInput);
 
                 // Convert the value. Expect NumberFormatException
                 double extent = Double.parseDouble(extentLine);
 
                 // Get and format the result from the method
-                String result = DF.format(getExponentiation(num, extent));
+                String result = PrintUtil.DF.format(getExponentiation(num, extent));
 
                 // Set the output format and print the result
                 String resultOut = String.format("%s to the extent of %s = %s", numLine, extentLine, result);
-                printResult(resultOut);
+                PrintUtil.printResult(resultOut);
             } catch(NumberFormatException ex) {
                 // Print a message with an invalid value on exception
-                printInvalidValue();
+                PrintUtil.printInvalidValue();
             }
         }
     }

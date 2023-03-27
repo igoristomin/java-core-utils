@@ -1,9 +1,8 @@
-package console.javacoreutils.util.maths;
+package igoristomin.javacoreutils.util.maths;
 
+import igoristomin.javacoreutils.util.PrintUtil;
 import org.springframework.stereotype.Service;
 import java.util.Scanner;
-import static console.javacoreutils.util.PrintUtil.*;
-import static console.javacoreutils.util.PrintUtil.printInvalidValue;
 
 @Service
 class DifferenceUtil {
@@ -13,16 +12,16 @@ class DifferenceUtil {
 
         while(true) {
             // Print the menu
-            printHead("Difference");
-            printBackClose();
+            PrintUtil.printHead("Difference");
+            PrintUtil.printBackClose();
 
             // Get String value
-            printEnterNums();
+            PrintUtil.printEnterNums();
             String numsLine = numsInput.nextLine();
 
             // Do back or close
-            if(backIf(numsLine)) break;
-            closeIf(numsLine, numsInput);
+            if(PrintUtil.backIf(numsLine)) break;
+            PrintUtil.closeIf(numsLine, numsInput);
 
             // Convert String value to String array
             String[] numsLineSplit = numsLine
@@ -38,14 +37,14 @@ class DifferenceUtil {
                 }
 
                 // Get and format the result from the method
-                String result = DF.format(getDifference(nums));
+                String result = PrintUtil.DF.format(getDifference(nums));
 
                 // Set the output format and print the result
                 String resultOut = String.format("Difference of %s = %s", numsLine, result);
-                printResult(resultOut);
+                PrintUtil.printResult(resultOut);
             } catch(NumberFormatException ex) {
                 // Print a message with an invalid value on exception
-                printInvalidValue();
+                PrintUtil.printInvalidValue();
             }
         }
     }

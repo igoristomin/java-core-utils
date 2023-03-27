@@ -1,10 +1,10 @@
-package console.javacoreutils.util;
+package igoristomin.javacoreutils.util;
 
-import console.javacoreutils.util.maths.MainMathsUtil;
-import console.javacoreutils.util.text.MainTextUtil;
+import igoristomin.javacoreutils.util.maths.MainMathsUtil;
+import igoristomin.javacoreutils.util.text.MainTextUtil;
 import org.springframework.stereotype.Service;
 import java.util.Scanner;
-import static console.javacoreutils.util.PrintUtil.*;
+import static igoristomin.javacoreutils.util.PrintUtil.*;
 
 @Service
 public class MainUtil {

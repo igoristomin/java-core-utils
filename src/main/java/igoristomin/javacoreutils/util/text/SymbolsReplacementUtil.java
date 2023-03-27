@@ -1,8 +1,8 @@
-package console.javacoreutils.util.text;
+package igoristomin.javacoreutils.util.text;
 
 import org.springframework.stereotype.Service;
 import java.util.Scanner;
-import static console.javacoreutils.util.PrintUtil.*;
+import static igoristomin.javacoreutils.util.PrintUtil.*;
 
 @Service
 class SymbolsReplacementUtil {

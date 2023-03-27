@@ -1,8 +1,8 @@
-package console.javacoreutils.util.maths;
+package igoristomin.javacoreutils.util.maths;
 
+import igoristomin.javacoreutils.util.PrintUtil;
 import org.springframework.stereotype.Service;
 import java.util.Scanner;
-import static console.javacoreutils.util.PrintUtil.*;
 
 @Service
 public class MainMathsUtil {
@@ -14,7 +14,7 @@ public class MainMathsUtil {
 
         while(execute) {
             // Print the menu
-            printHead("Maths utils");
+            PrintUtil.printHead("Maths utils");
             System.out.println("!average");
             System.out.println("!composition");
             System.out.println("!difference");
@@ -25,67 +25,67 @@ public class MainMathsUtil {
             System.out.println("!quotient");
             System.out.println("!square-root");
             System.out.println("!sum");
-            printBorder("thin");
-            printBackClose();
+            PrintUtil.printBorder("thin");
+            PrintUtil.printBackClose();
 
             // Get String value
-            utilName = printEnterUtil(utilName, utilNameInput);
+            utilName = PrintUtil.printEnterUtil(utilName, utilNameInput);
 
             // Check the entered value and perform the following actions
             switch(utilName) {
                 case "!average":
-                    printDoneCase("!average");
+                    PrintUtil.printDoneCase("!average");
                     AverageUtil.run();
                     break;
                 case "!composition":
-                    printDoneCase("!composition");
+                    PrintUtil.printDoneCase("!composition");
                     CompositionUtil.run();
                     break;
                 case "!difference":
-                    printDoneCase("!difference");
+                    PrintUtil.printDoneCase("!difference");
                     DifferenceUtil.run();
                     break;
                 case "!exponentiation":
-                    printDoneCase("!exponentiation");
+                    PrintUtil.printDoneCase("!exponentiation");
                     ExponentiationUtil.run();
                     break;
                 case "!factorial":
-                    printDoneCase("!factorial");
+                    PrintUtil.printDoneCase("!factorial");
                     FactorialUtil.run();
                     break;
                 case "!less":
-                    printDoneCase("!less");
+                    PrintUtil.printDoneCase("!less");
                     LessUtil.run();
                     break;
                 case "!more":
-                    printDoneCase("!more");
+                    PrintUtil.printDoneCase("!more");
                     MoreUtil.run();
                     break;
                 case "!quotient":
-                    printDoneCase("!quotient");
+                    PrintUtil.printDoneCase("!quotient");
                     QuotientUtil.run();
                     break;
                 case "!square-root":
-                    printDoneCase("!square-root");
+                    PrintUtil.printDoneCase("!square-root");
                     SquareRootUtil.run();
                     break;
                 case "!sum":
-                    printDoneCase("!sum");
+                    PrintUtil.printDoneCase("!sum");
                     SumUtil.run();
                     break;
-                case CMD_BACK:
-                case CMD_CLOSE:
+                case PrintUtil.CMD_BACK:
+                case PrintUtil.CMD_CLOSE:
                     execute = false;
                     break;
                 default:
                     // Print a message with an invalid value
-                    printInvalidValue();
+                    PrintUtil.printInvalidValue();
                     break;
             }
 
             // Do back or close
-            if(backIf(utilName)) break;
-            closeIf(utilName, utilNameInput);
+            if(PrintUtil.backIf(utilName)) break;
+            PrintUtil.closeIf(utilName, utilNameInput);
         }
     }
 
