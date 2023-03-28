@@ -40,7 +40,7 @@ class AverageUtil {
                 String result = PrintUtil.DF.format(getAverage(nums));
 
                 // Set the output format and print the result
-                String resultOut = String.format("Average of %s = %s", numsLine, result);
+                String resultOut = String.format("Average of %s: %s", numsLine, result);
                 PrintUtil.printResult(resultOut);
             } catch(NumberFormatException ex) {
                 // Print a message with an invalid value on exception

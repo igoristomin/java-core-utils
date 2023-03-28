@@ -30,10 +30,10 @@ class SymbolsAmountUtil {
             int wordsAmount = getWordsAmount(textLine);
 
             // Print the results
-            System.out.println("Symbols amount = " + symbolsAmount);
-            System.out.println("Without spaces = " + symbolsNoSpaces);
-            System.out.println("Without spaces and punctuation marks = " + symbolsNoSpacesPunctMarks);
-            System.out.println("Words amount = " + wordsAmount);
+            System.out.println("Symbols amount: " + symbolsAmount);
+            System.out.println("Without spaces: " + symbolsNoSpaces);
+            System.out.println("Without spaces and punctuation marks: " + symbolsNoSpacesPunctMarks);
+            System.out.println("Words amount: " + wordsAmount);
             PrintUtil.printBorder("fat");
         }
     }

@@ -40,7 +40,7 @@ class CompositionUtil {
                 String result = PrintUtil.DF.format(getComposition(nums));
 
                 // Set the output format and print the result
-                String resultOut = String.format("Composition of %s = %s", numsLine, result);
+                String resultOut = String.format("Composition of %s: %s", numsLine, result);
                 PrintUtil.printResult(resultOut);
             } catch(NumberFormatException ex) {
                 // Print a message with an invalid value on exception
