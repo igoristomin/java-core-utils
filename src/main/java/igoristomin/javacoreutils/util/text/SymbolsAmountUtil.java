@@ -8,7 +8,7 @@ import java.util.Scanner;
 class SymbolsAmountUtil {
 
     static void run() {
-        Scanner textInput = new Scanner(System.in, "UTF-8");
+        Scanner textInput = new Scanner(System.in);
 
         while(true) {
             // Print the menu
