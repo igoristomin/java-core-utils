@@ -8,8 +8,8 @@ import java.util.Scanner;
 public class MainTextUtil {
 
     public static void run() {
-        Scanner utilNameInput = new Scanner(System.in);
-        String utilName = "";
+        Scanner utilInput = new Scanner(System.in);
+        String util = "";
         boolean execute = true;
 
         while(execute) {
@@ -21,10 +21,10 @@ public class MainTextUtil {
             PrintUtil.printBackClose();
 
             // Get String value
-            utilName = PrintUtil.printEnterUtil(utilName, utilNameInput);
+            util = PrintUtil.printEnterUtil(util, utilInput);
 
             // Check the entered value and perform the following actions
-            switch(utilName) {
+            switch(util) {
                 case "!symbols-amount":
                     PrintUtil.printDoneCase("!symbols-amount");
                     SymbolsAmountUtil.run();
@@ -44,8 +44,8 @@ public class MainTextUtil {
             }
 
             // Do back or close
-            if(PrintUtil.backIf(utilName)) break;
-            PrintUtil.closeIf(utilName, utilNameInput);
+            if(PrintUtil.backIf(util)) break;
+            PrintUtil.closeIf(util, utilInput);
         }
     }
 

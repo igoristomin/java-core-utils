@@ -15,14 +15,14 @@ public class PrintUtil {
         System.out.println("\n======== " + text + " ========");
     }
 
-    public static String printEnterUtil(String utilName, Scanner utilNameInput) {
+    public static String printEnterUtil(String util, Scanner utilInput) {
         System.out.print("Enter the util: ");
-        utilName = utilNameInput.nextLine();
-        return utilName;
+        util = utilInput.nextLine();
+        return util;
     }
 
-    public static void printDoneCase(String utilName) {
-        System.out.println("Done " + utilName);
+    public static void printDoneCase(String util) {
+        System.out.println("Done " + util);
         printBorder("fat");
     }
 
