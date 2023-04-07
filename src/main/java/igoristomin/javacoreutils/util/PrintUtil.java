@@ -15,10 +15,9 @@ public class PrintUtil {
         System.out.println("\n======== " + text + " ========");
     }
 
-    public static String printEnterUtil(String util, Scanner utilInput) {
+    public static String printEnterUtil(Scanner utilInput) {
         System.out.print("Enter the util: ");
-        util = utilInput.nextLine();
-        return util;
+        return utilInput.nextLine();
     }
 
     public static void printDoneCase(String util) {

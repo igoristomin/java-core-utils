@@ -29,7 +29,7 @@ public class MainMathsUtil {
             PrintUtil.printBackClose();
 
             // Get String value
-            util = PrintUtil.printEnterUtil(util, utilInput);
+            util = PrintUtil.printEnterUtil(utilInput);
 
             // Check the entered value and perform the following actions
             switch(util) {
