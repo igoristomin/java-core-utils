@@ -21,7 +21,7 @@ class SymbolsAmountUtil {
 
             // Do back or close
             if(PrintUtil.doIfBack(textLine)) break;
-            PrintUtil.closeIf(textLine, textInput);
+            PrintUtil.doIfClose(textLine, textInput);
 
             // Get the results
             int symbolsAmount = textLine.length();

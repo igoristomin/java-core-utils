@@ -85,7 +85,7 @@ public class MainMathsUtil {
 
             // Do back or close
             if(PrintUtil.doIfBack(util)) break;
-            PrintUtil.closeIf(util, utilInput);
+            PrintUtil.doIfClose(util, utilInput);
         }
     }
 

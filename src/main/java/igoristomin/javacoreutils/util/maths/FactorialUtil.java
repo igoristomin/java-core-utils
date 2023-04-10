@@ -21,7 +21,7 @@ class FactorialUtil {
 
             // Do back or close
             if(PrintUtil.doIfBack(numLine)) break;
-            PrintUtil.closeIf(numLine, numInput);
+            PrintUtil.doIfClose(numLine, numInput);
 
             try {
                 // Convert and get values, format the result from the method

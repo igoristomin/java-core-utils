@@ -21,7 +21,7 @@ class QuotientUtil {
 
             // Do back or close
             if(PrintUtil.doIfBack(numsLine)) break;
-            PrintUtil.closeIf(numsLine, numsInput);
+            PrintUtil.doIfClose(numsLine, numsInput);
 
             // Convert String value to String array
             String[] numsLineSplit = numsLine

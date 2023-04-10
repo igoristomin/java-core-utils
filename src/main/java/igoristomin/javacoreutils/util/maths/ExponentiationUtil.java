@@ -23,7 +23,7 @@ class ExponentiationUtil {
 
                 // Do back or close
                 if(PrintUtil.doIfBack(numLine)) break;
-                PrintUtil.closeIf(numLine, numInput);
+                PrintUtil.doIfClose(numLine, numInput);
 
                 // Convert the value. Expect NumberFormatException
                 double num = Double.parseDouble(numLine);
@@ -34,7 +34,7 @@ class ExponentiationUtil {
 
                 // Do back or close
                 if(PrintUtil.doIfBack(extentLine)) break;
-                PrintUtil.closeIf(extentLine, extentInput);
+                PrintUtil.doIfClose(extentLine, extentInput);
 
                 // Convert the value. Expect NumberFormatException
                 double extent = Double.parseDouble(extentLine);

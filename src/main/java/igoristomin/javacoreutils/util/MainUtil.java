@@ -47,7 +47,7 @@ public class MainUtil {
             }
 
             // Choose !close
-            closeIf(utilGroup, utilGroupInput);
+            doIfClose(utilGroup, utilGroupInput);
         }
     }
 

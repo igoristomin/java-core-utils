@@ -40,7 +40,7 @@ public class PrintUtil {
         return false;
     }
 
-    public static void closeIf(String value, Scanner valueInput) {
+    public static void doIfClose(String value, Scanner valueInput) {
         if(value.equals(CMD_CLOSE)) {
             System.out.println("Done " + CMD_CLOSE);
             printBorder("fat");
