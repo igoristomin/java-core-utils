@@ -1,8 +1,8 @@
 package igoristomin.javacoreutils.util.maths;
 
-import igoristomin.javacoreutils.util.PrintUtil;
 import org.springframework.stereotype.Service;
 import java.util.Scanner;
+import static igoristomin.javacoreutils.util.PrintUtil.*;
 
 @Service
 class LessUtil {
@@ -12,16 +12,16 @@ class LessUtil {
 
         while(true) {
             // Print the menu
-            PrintUtil.printHead("Less");
-            PrintUtil.printBackClose();
+            printHead("Less");
+            printBackClose();
 
             // Get String value
-            PrintUtil.printEnterNums();
+            printEnterNums();
             String numsLine = numsInput.nextLine();
 
             // Execute if a value is entered equal to the values CMD_BACK or CMD_CLOSE
-            if(PrintUtil.doIfBack(numsLine)) break;
-            PrintUtil.doIfClose(numsLine, numsInput);
+            if(doIfBack(numsLine)) break;
+            doIfClose(numsLine, numsInput);
 
             // Convert String value to String array
             String[] numsLineSplit = numsLine
@@ -37,14 +37,14 @@ class LessUtil {
                 }
 
                 // Get and format the result from the method
-                String result = PrintUtil.FORMAT_DECIMAL.format(getLess(nums));
+                String result = FORMAT_DECIMAL.format(getLess(nums));
 
                 // Set the output format and print the result
                 String resultOut = String.format("Less of %s: %s", numsLine, result);
-                PrintUtil.printResult(resultOut);
+                printResult(resultOut);
             } catch(NumberFormatException ex) {
                 // Print a message with an invalid value on exception
-                PrintUtil.printInvalidValue();
+                printInvalidValue();
             }
         }
     }

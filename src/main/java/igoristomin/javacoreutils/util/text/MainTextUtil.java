@@ -1,8 +1,8 @@
 package igoristomin.javacoreutils.util.text;
 
-import igoristomin.javacoreutils.util.PrintUtil;
 import org.springframework.stereotype.Service;
 import java.util.Scanner;
+import static igoristomin.javacoreutils.util.PrintUtil.*;
 
 @Service
 public class MainTextUtil {
@@ -13,38 +13,38 @@ public class MainTextUtil {
 
         while(execute) {
             // Print the menu
-            PrintUtil.printHead("Text utils");
+            printHead("Text utils");
             System.out.println("!symbols-amount");
             System.out.println("!symbols-replacement");
-            PrintUtil.printBorder("thin");
-            PrintUtil.printBackClose();
+            printBorder("thin");
+            printBackClose();
 
             // Get String value
-            String util = PrintUtil.printEnterUtil(utilInput);
+            String util = printEnterUtil(utilInput);
 
             // Check the entered value and perform the following actions
             switch(util) {
                 case "!symbols-amount":
-                    PrintUtil.printDoneCase("!symbols-amount");
+                    printDoneCase("!symbols-amount");
                     SymbolsAmountUtil.run();
                     break;
                 case "!symbols-replacement":
-                    PrintUtil.printDoneCase("!symbols-replacement");
+                    printDoneCase("!symbols-replacement");
                     SymbolsReplacementUtil.run();
                     break;
-                case PrintUtil.CMD_BACK:
-                case PrintUtil.CMD_CLOSE:
+                case CMD_BACK:
+                case CMD_CLOSE:
                     execute = false;
                     break;
                 default:
                     // Print a message with an invalid value
-                    PrintUtil.printInvalidValue();
+                    printInvalidValue();
                     break;
             }
 
             // Execute if a value is entered equal to the values CMD_BACK or CMD_CLOSE
-            if(PrintUtil.doIfBack(util)) break;
-            PrintUtil.doIfClose(util, utilInput);
+            if(doIfBack(util)) break;
+            doIfClose(util, utilInput);
         }
     }
 

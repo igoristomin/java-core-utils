@@ -1,8 +1,8 @@
 package igoristomin.javacoreutils.util.maths;
 
-import igoristomin.javacoreutils.util.PrintUtil;
 import org.springframework.stereotype.Service;
 import java.util.Scanner;
+import static igoristomin.javacoreutils.util.PrintUtil.*;
 
 @Service
 class QuotientUtil {
@@ -12,16 +12,16 @@ class QuotientUtil {
 
         while(true) {
             // Print the menu
-            PrintUtil.printHead("Quotient");
-            PrintUtil.printBackClose();
+            printHead("Quotient");
+            printBackClose();
 
             // Get String value
-            PrintUtil.printEnterNums();
+            printEnterNums();
             String numsLine = numsInput.nextLine();
 
             // Execute if a value is entered equal to the values CMD_BACK or CMD_CLOSE
-            if(PrintUtil.doIfBack(numsLine)) break;
-            PrintUtil.doIfClose(numsLine, numsInput);
+            if(doIfBack(numsLine)) break;
+            doIfClose(numsLine, numsInput);
 
             // Convert String value to String array
             String[] numsLineSplit = numsLine
@@ -37,14 +37,14 @@ class QuotientUtil {
                 }
 
                 // Get and format the result from the method
-                String result = PrintUtil.FORMAT_DECIMAL.format(getQuotient(nums));
+                String result = FORMAT_DECIMAL.format(getQuotient(nums));
 
                 // Set the output format and print the result
                 String resultOut = String.format("Quotient of %s: %s", numsLine, result);
-                PrintUtil.printResult(resultOut);
+                printResult(resultOut);
             } catch(NumberFormatException ex) {
                 // Print a message with an invalid value on exception
-                PrintUtil.printInvalidValue();
+                printInvalidValue();
             }
         }
     }

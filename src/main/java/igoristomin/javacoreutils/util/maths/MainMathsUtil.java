@@ -1,8 +1,8 @@
 package igoristomin.javacoreutils.util.maths;
 
-import igoristomin.javacoreutils.util.PrintUtil;
 import org.springframework.stereotype.Service;
 import java.util.Scanner;
+import static igoristomin.javacoreutils.util.PrintUtil.*;
 
 @Service
 public class MainMathsUtil {
@@ -13,7 +13,7 @@ public class MainMathsUtil {
 
         while(execute) {
             // Print the menu
-            PrintUtil.printHead("Maths utils");
+            printHead("Maths utils");
             System.out.println("!average");
             System.out.println("!composition");
             System.out.println("!difference");
@@ -24,67 +24,67 @@ public class MainMathsUtil {
             System.out.println("!quotient");
             System.out.println("!square-root");
             System.out.println("!sum");
-            PrintUtil.printBorder("thin");
-            PrintUtil.printBackClose();
+            printBorder("thin");
+            printBackClose();
 
             // Get String value
-            String util = PrintUtil.printEnterUtil(utilInput);
+            String util = printEnterUtil(utilInput);
 
             // Check the entered value and perform the following actions
             switch(util) {
                 case "!average":
-                    PrintUtil.printDoneCase("!average");
+                    printDoneCase("!average");
                     AverageUtil.run();
                     break;
                 case "!composition":
-                    PrintUtil.printDoneCase("!composition");
+                    printDoneCase("!composition");
                     CompositionUtil.run();
                     break;
                 case "!difference":
-                    PrintUtil.printDoneCase("!difference");
+                    printDoneCase("!difference");
                     DifferenceUtil.run();
                     break;
                 case "!exponentiation":
-                    PrintUtil.printDoneCase("!exponentiation");
+                    printDoneCase("!exponentiation");
                     ExponentiationUtil.run();
                     break;
                 case "!factorial":
-                    PrintUtil.printDoneCase("!factorial");
+                    printDoneCase("!factorial");
                     FactorialUtil.run();
                     break;
                 case "!less":
-                    PrintUtil.printDoneCase("!less");
+                    printDoneCase("!less");
                     LessUtil.run();
                     break;
                 case "!more":
-                    PrintUtil.printDoneCase("!more");
+                    printDoneCase("!more");
                     MoreUtil.run();
                     break;
                 case "!quotient":
-                    PrintUtil.printDoneCase("!quotient");
+                    printDoneCase("!quotient");
                     QuotientUtil.run();
                     break;
                 case "!square-root":
-                    PrintUtil.printDoneCase("!square-root");
+                    printDoneCase("!square-root");
                     SquareRootUtil.run();
                     break;
                 case "!sum":
-                    PrintUtil.printDoneCase("!sum");
+                    printDoneCase("!sum");
                     SumUtil.run();
                     break;
-                case PrintUtil.CMD_BACK:
-                case PrintUtil.CMD_CLOSE:
+                case CMD_BACK:
+                case CMD_CLOSE:
                     execute = false;
                     break;
                 default:
                     // Print a message with an invalid value
-                    PrintUtil.printInvalidValue();
+                    printInvalidValue();
                     break;
             }
 
             // Execute if a value is entered equal to the values CMD_BACK or CMD_CLOSE
-            if(PrintUtil.doIfBack(util)) break;
-            PrintUtil.doIfClose(util, utilInput);
+            if(doIfBack(util)) break;
+            doIfClose(util, utilInput);
         }
     }
 

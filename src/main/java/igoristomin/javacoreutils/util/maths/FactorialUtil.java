@@ -1,8 +1,8 @@
 package igoristomin.javacoreutils.util.maths;
 
-import igoristomin.javacoreutils.util.PrintUtil;
 import org.springframework.stereotype.Service;
 import java.util.Scanner;
+import static igoristomin.javacoreutils.util.PrintUtil.*;
 
 @Service
 class FactorialUtil {
@@ -12,28 +12,28 @@ class FactorialUtil {
 
         while(true) {
             // Print the menu
-            PrintUtil.printHead("Factorial");
-            PrintUtil.printBackClose();
+            printHead("Factorial");
+            printBackClose();
 
             // Get String value
-            PrintUtil.printEnterNum();
+            printEnterNum();
             String numLine = numInput.nextLine();
 
             // Execute if a value is entered equal to the values CMD_BACK or CMD_CLOSE
-            if(PrintUtil.doIfBack(numLine)) break;
-            PrintUtil.doIfClose(numLine, numInput);
+            if(doIfBack(numLine)) break;
+            doIfClose(numLine, numInput);
 
             try {
                 // Convert and get values, format the result from the method
                 double num = Double.parseDouble(numLine);
-                String result = PrintUtil.FORMAT_DECIMAL.format(getFactorial(num));
+                String result = FORMAT_DECIMAL.format(getFactorial(num));
 
                 // Set the output format and print the result
                 String resultOut = String.format("Factorial of %s: %s", numLine, result);
-                PrintUtil.printResult(resultOut);
+                printResult(resultOut);
             } catch(NumberFormatException ex) {
                 // Print a message with an invalid value on exception
-                PrintUtil.printInvalidValue();
+                printInvalidValue();
             }
         }
     }
