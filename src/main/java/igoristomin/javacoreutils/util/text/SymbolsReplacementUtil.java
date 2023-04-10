@@ -22,21 +22,21 @@ class SymbolsReplacementUtil {
             String textLine = textInput.nextLine();
 
             // Do back or close
-            if(backIf(textLine)) break;
+            if(doIfBack(textLine)) break;
             closeIf(textLine, textInput);
 
             System.out.print("Enter symbols: ");
             String symbolsLine = symbolsInput.nextLine();
 
             // Do back or close
-            if(backIf(symbolsLine)) break;
+            if(doIfBack(symbolsLine)) break;
             closeIf(symbolsLine, symbolsInput);
 
             System.out.print("Enter replacement symbols: ");
             String symbolsReplLine = symbolsReplInput.nextLine();
 
             // Do back or close
-            if(backIf(symbolsReplLine)) break;
+            if(doIfBack(symbolsReplLine)) break;
             closeIf(symbolsReplLine, symbolsReplInput);
 
             // Get the result

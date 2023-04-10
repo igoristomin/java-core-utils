@@ -20,7 +20,7 @@ class AverageUtil {
             String numsLine = numsInput.nextLine();
 
             // Do back or close
-            if(PrintUtil.backIf(numsLine)) break;
+            if(PrintUtil.doIfBack(numsLine)) break;
             PrintUtil.closeIf(numsLine, numsInput);
 
             // Convert String value to String array

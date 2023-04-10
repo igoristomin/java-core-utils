@@ -20,7 +20,7 @@ class SymbolsAmountUtil {
             String textLine = textInput.nextLine();
 
             // Do back or close
-            if(PrintUtil.backIf(textLine)) break;
+            if(PrintUtil.doIfBack(textLine)) break;
             PrintUtil.closeIf(textLine, textInput);
 
             // Get the results

@@ -44,7 +44,7 @@ public class MainTextUtil {
             }
 
             // Do back or close
-            if(PrintUtil.backIf(util)) break;
+            if(PrintUtil.doIfBack(util)) break;
             PrintUtil.closeIf(util, utilInput);
         }
     }

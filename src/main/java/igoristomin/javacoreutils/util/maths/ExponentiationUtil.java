@@ -22,7 +22,7 @@ class ExponentiationUtil {
                 String numLine = numInput.nextLine();
 
                 // Do back or close
-                if(PrintUtil.backIf(numLine)) break;
+                if(PrintUtil.doIfBack(numLine)) break;
                 PrintUtil.closeIf(numLine, numInput);
 
                 // Convert the value. Expect NumberFormatException
@@ -33,7 +33,7 @@ class ExponentiationUtil {
                 String extentLine = extentInput.nextLine();
 
                 // Do back or close
-                if(PrintUtil.backIf(extentLine)) break;
+                if(PrintUtil.doIfBack(extentLine)) break;
                 PrintUtil.closeIf(extentLine, extentInput);
 
                 // Convert the value. Expect NumberFormatException

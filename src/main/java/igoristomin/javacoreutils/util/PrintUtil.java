@@ -31,7 +31,7 @@ public class PrintUtil {
         printBorder("thin");
     }
 
-    public static boolean backIf(String value) {
+    public static boolean doIfBack(String value) {
         if(value.equals(CMD_BACK)) {
             System.out.println("Done " + CMD_BACK);
             printBorder("fat");

@@ -20,7 +20,7 @@ class SquareRootUtil {
             String numLine = numInput.nextLine();
 
             // Do back or close
-            if(PrintUtil.backIf(numLine)) break;
+            if(PrintUtil.doIfBack(numLine)) break;
             PrintUtil.closeIf(numLine, numInput);
 
             try {
