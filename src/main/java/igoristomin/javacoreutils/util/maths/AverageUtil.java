@@ -37,7 +37,7 @@ class AverageUtil {
                 }
 
                 // Get and format the result from the method
-                String result = PrintUtil.DF.format(getAverage(nums));
+                String result = PrintUtil.FORMAT_DECIMAL.format(getAverage(nums));
 
                 // Set the output format and print the result
                 String resultOut = String.format("Average of %s: %s", numsLine, result);

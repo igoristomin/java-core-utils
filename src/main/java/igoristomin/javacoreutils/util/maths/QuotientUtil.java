@@ -37,7 +37,7 @@ class QuotientUtil {
                 }
 
                 // Get and format the result from the method
-                String result = PrintUtil.DF.format(getQuotient(nums));
+                String result = PrintUtil.FORMAT_DECIMAL.format(getQuotient(nums));
 
                 // Set the output format and print the result
                 String resultOut = String.format("Quotient of %s: %s", numsLine, result);

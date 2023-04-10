@@ -40,7 +40,7 @@ class ExponentiationUtil {
                 double extent = Double.parseDouble(extentLine);
 
                 // Get and format the result from the method
-                String result = PrintUtil.DF.format(getExponentiation(num, extent));
+                String result = PrintUtil.FORMAT_DECIMAL.format(getExponentiation(num, extent));
 
                 // Set the output format and print the result
                 String resultOut = String.format("%s to the extent of %s: %s", numLine, extentLine, result);

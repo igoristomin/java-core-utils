@@ -37,7 +37,7 @@ class DifferenceUtil {
                 }
 
                 // Get and format the result from the method
-                String result = PrintUtil.DF.format(getDifference(nums));
+                String result = PrintUtil.FORMAT_DECIMAL.format(getDifference(nums));
 
                 // Set the output format and print the result
                 String resultOut = String.format("Difference of %s: %s", numsLine, result);

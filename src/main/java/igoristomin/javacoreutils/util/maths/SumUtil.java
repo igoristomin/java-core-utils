@@ -37,7 +37,7 @@ class SumUtil {
                 }
 
                 // Get and format the result from the method
-                String result = PrintUtil.DF.format(getSum(nums));
+                String result = PrintUtil.FORMAT_DECIMAL.format(getSum(nums));
 
                 // Set the output format and print the result
                 String resultOut = String.format("Sum of %s: %s", numsLine, result);

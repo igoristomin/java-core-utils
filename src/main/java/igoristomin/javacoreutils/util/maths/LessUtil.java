@@ -37,7 +37,7 @@ class LessUtil {
                 }
 
                 // Get and format the result from the method
-                String result = PrintUtil.DF.format(getLess(nums));
+                String result = PrintUtil.FORMAT_DECIMAL.format(getLess(nums));
 
                 // Set the output format and print the result
                 String resultOut = String.format("Less of %s: %s", numsLine, result);

@@ -37,7 +37,7 @@ class MoreUtil {
                 }
 
                 // Get and format the result from the method
-                String result = PrintUtil.DF.format(getMore(nums));
+                String result = PrintUtil.FORMAT_DECIMAL.format(getMore(nums));
 
                 // Set the output format and print the result
                 String resultOut = String.format("More of %s: %s", numsLine, result);

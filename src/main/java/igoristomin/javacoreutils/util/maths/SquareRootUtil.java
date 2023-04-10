@@ -26,7 +26,7 @@ class SquareRootUtil {
             try {
                 // Convert and get values, format the result from the method
                 double num = Double.parseDouble(numLine);
-                String result = PrintUtil.DF.format(getRoot(num));
+                String result = PrintUtil.FORMAT_DECIMAL.format(getRoot(num));
 
                 // Set the output format and print the result
                 String resultOut = String.format("Square root of %s: %s", numLine, result);

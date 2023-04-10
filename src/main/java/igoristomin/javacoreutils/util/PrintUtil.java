@@ -9,7 +9,7 @@ public class PrintUtil {
 
     public static final String CMD_BACK = "!back";
     public static final String CMD_CLOSE = "!close";
-    public static final DecimalFormat DF = new DecimalFormat("0.###");
+    public static final DecimalFormat FORMAT_DECIMAL = new DecimalFormat("0.###");
 
     public static void printHead(String text) {
         System.out.println("\n======== " + text + " ========");

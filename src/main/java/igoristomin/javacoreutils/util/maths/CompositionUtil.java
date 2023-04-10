@@ -37,7 +37,7 @@ class CompositionUtil {
                 }
 
                 // Get and format the result from the method
-                String result = PrintUtil.DF.format(getComposition(nums));
+                String result = PrintUtil.FORMAT_DECIMAL.format(getComposition(nums));
 
                 // Set the output format and print the result
                 String resultOut = String.format("Composition of %s: %s", numsLine, result);

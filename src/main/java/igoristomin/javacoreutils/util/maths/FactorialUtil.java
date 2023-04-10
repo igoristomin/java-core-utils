@@ -26,7 +26,7 @@ class FactorialUtil {
             try {
                 // Convert and get values, format the result from the method
                 double num = Double.parseDouble(numLine);
-                String result = PrintUtil.DF.format(getFactorial(num));
+                String result = PrintUtil.FORMAT_DECIMAL.format(getFactorial(num));
 
                 // Set the output format and print the result
                 String resultOut = String.format("Factorial of %s: %s", numLine, result);
