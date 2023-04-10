@@ -82,7 +82,7 @@ public class MainMathsUtil {
                     break;
             }
 
-            // Do back or close
+            // Execute if a value is entered equal to the values CMD_BACK or CMD_CLOSE
             if(PrintUtil.doIfBack(util)) break;
             PrintUtil.doIfClose(util, utilInput);
         }

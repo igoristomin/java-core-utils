@@ -19,7 +19,7 @@ class MoreUtil {
             PrintUtil.printEnterNums();
             String numsLine = numsInput.nextLine();
 
-            // Do back or close
+            // Execute if a value is entered equal to the values CMD_BACK or CMD_CLOSE
             if(PrintUtil.doIfBack(numsLine)) break;
             PrintUtil.doIfClose(numsLine, numsInput);
 

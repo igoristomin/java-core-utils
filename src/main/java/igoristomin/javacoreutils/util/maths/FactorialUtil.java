@@ -19,7 +19,7 @@ class FactorialUtil {
             PrintUtil.printEnterNum();
             String numLine = numInput.nextLine();
 
-            // Do back or close
+            // Execute if a value is entered equal to the values CMD_BACK or CMD_CLOSE
             if(PrintUtil.doIfBack(numLine)) break;
             PrintUtil.doIfClose(numLine, numInput);
 

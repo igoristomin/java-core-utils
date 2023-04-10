@@ -21,21 +21,21 @@ class SymbolsReplacementUtil {
             printEnterText();
             String textLine = textInput.nextLine();
 
-            // Do back or close
+            // Execute if a value is entered equal to the values CMD_BACK or CMD_CLOSE
             if(doIfBack(textLine)) break;
             doIfClose(textLine, textInput);
 
             System.out.print("Enter symbols: ");
             String symbolsLine = symbolsInput.nextLine();
 
-            // Do back or close
+            // Execute if a value is entered equal to the values CMD_BACK or CMD_CLOSE
             if(doIfBack(symbolsLine)) break;
             doIfClose(symbolsLine, symbolsInput);
 
             System.out.print("Enter replacement symbols: ");
             String symbolsReplLine = symbolsReplInput.nextLine();
 
-            // Do back or close
+            // Execute if a value is entered equal to the values CMD_BACK or CMD_CLOSE
             if(doIfBack(symbolsReplLine)) break;
             doIfClose(symbolsReplLine, symbolsReplInput);
 

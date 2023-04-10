@@ -45,7 +45,7 @@ public class MainUtil {
                     break;
             }
 
-            // Choose !close
+            // Execute if a value equal to the CMD_CLOSE value is entered
             doIfClose(utilGroup, utilGroupInput);
         }
     }

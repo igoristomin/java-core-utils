@@ -19,7 +19,7 @@ class SymbolsAmountUtil {
             PrintUtil.printEnterText();
             String textLine = textInput.nextLine();
 
-            // Do back or close
+            // Execute if a value is entered equal to the values CMD_BACK or CMD_CLOSE
             if(PrintUtil.doIfBack(textLine)) break;
             PrintUtil.doIfClose(textLine, textInput);
 
