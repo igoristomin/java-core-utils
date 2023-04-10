@@ -9,7 +9,6 @@ public class MainTextUtil {
 
     public static void run() {
         Scanner utilInput = new Scanner(System.in);
-        String util = "";
         boolean execute = true;
 
         while(execute) {
@@ -21,7 +20,7 @@ public class MainTextUtil {
             PrintUtil.printBackClose();
 
             // Get String value
-            util = PrintUtil.printEnterUtil(utilInput);
+            String util = PrintUtil.printEnterUtil(utilInput);
 
             // Check the entered value and perform the following actions
             switch(util) {

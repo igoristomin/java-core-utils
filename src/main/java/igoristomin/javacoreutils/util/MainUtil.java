@@ -11,7 +11,6 @@ public class MainUtil {
 
     public static void run() {
         Scanner utilGroupInput = new Scanner(System.in);
-        String utilGroup;
         boolean execute = true;
 
         while(execute) {
@@ -25,7 +24,7 @@ public class MainUtil {
 
             // Get String value
             System.out.print("Enter a group of utils: ");
-            utilGroup = utilGroupInput.nextLine();
+            String utilGroup = utilGroupInput.nextLine();
 
             // Check the entered value and perform the following actions
             switch(utilGroup) {
