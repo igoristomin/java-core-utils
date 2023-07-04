@@ -14,8 +14,8 @@ public class MainTextUtil {
         while(execute) {
             // Print the menu
             printHead("Text utils");
-            System.out.println("!symbols-amount");
-            System.out.println("!symbols-replacement");
+            System.out.println("symbols-amount");
+            System.out.println("symbols-replacement");
             printBorder("thin");
             printBackClose();
 
@@ -24,12 +24,12 @@ public class MainTextUtil {
 
             // Check the entered value and perform the following actions
             switch(util) {
-                case "!symbols-amount":
-                    printDoneCase("!symbols-amount");
+                case "symbols-amount":
+                    printDoneCase("symbols-amount");
                     SymbolsAmountUtil.run();
                     break;
-                case "!symbols-replacement":
-                    printDoneCase("!symbols-replacement");
+                case "symbols-replacement":
+                    printDoneCase("symbols-replacement");
                     SymbolsReplacementUtil.run();
                     break;
                 case CMD_BACK:

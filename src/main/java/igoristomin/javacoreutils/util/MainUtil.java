@@ -16,8 +16,8 @@ public class MainUtil {
         while(execute) {
             // Print the menu
             printHead("Java Core Utils");
-            System.out.println("!maths");
-            System.out.println("!text");
+            System.out.println("maths");
+            System.out.println("text");
             printBorder("thin");
             System.out.println(CMD_CLOSE);
             printBorder("thin");
@@ -28,12 +28,12 @@ public class MainUtil {
 
             // Check the entered value and perform the following actions
             switch(utilGroup) {
-                case "!maths":
-                    printDoneCase("!maths");
+                case "maths":
+                    printDoneCase("maths");
                     MainMathsUtil.run();
                     break;
-                case "!text":
-                    printDoneCase("!text");
+                case "text":
+                    printDoneCase("text");
                     MainTextUtil.run();
                     break;
                 case CMD_CLOSE:

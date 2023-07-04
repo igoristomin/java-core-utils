@@ -14,16 +14,16 @@ public class MainMathsUtil {
         while(execute) {
             // Print the menu
             printHead("Maths utils");
-            System.out.println("!average");
-            System.out.println("!composition");
-            System.out.println("!difference");
-            System.out.println("!exponentiation");
-            System.out.println("!factorial");
-            System.out.println("!less");
-            System.out.println("!more");
-            System.out.println("!quotient");
-            System.out.println("!square-root");
-            System.out.println("!sum");
+            System.out.println("average");
+            System.out.println("composition");
+            System.out.println("difference");
+            System.out.println("exponentiation");
+            System.out.println("factorial");
+            System.out.println("less");
+            System.out.println("more");
+            System.out.println("quotient");
+            System.out.println("square-root");
+            System.out.println("sum");
             printBorder("thin");
             printBackClose();
 
@@ -32,44 +32,44 @@ public class MainMathsUtil {
 
             // Check the entered value and perform the following actions
             switch(util) {
-                case "!average":
-                    printDoneCase("!average");
+                case "average":
+                    printDoneCase("average");
                     AverageUtil.run();
                     break;
-                case "!composition":
-                    printDoneCase("!composition");
+                case "composition":
+                    printDoneCase("composition");
                     CompositionUtil.run();
                     break;
-                case "!difference":
-                    printDoneCase("!difference");
+                case "difference":
+                    printDoneCase("difference");
                     DifferenceUtil.run();
                     break;
-                case "!exponentiation":
-                    printDoneCase("!exponentiation");
+                case "exponentiation":
+                    printDoneCase("exponentiation");
                     ExponentiationUtil.run();
                     break;
-                case "!factorial":
-                    printDoneCase("!factorial");
+                case "factorial":
+                    printDoneCase("factorial");
                     FactorialUtil.run();
                     break;
-                case "!less":
-                    printDoneCase("!less");
+                case "less":
+                    printDoneCase("less");
                     LessUtil.run();
                     break;
-                case "!more":
-                    printDoneCase("!more");
+                case "more":
+                    printDoneCase("more");
                     MoreUtil.run();
                     break;
-                case "!quotient":
-                    printDoneCase("!quotient");
+                case "quotient":
+                    printDoneCase("quotient");
                     QuotientUtil.run();
                     break;
-                case "!square-root":
-                    printDoneCase("!square-root");
+                case "square-root":
+                    printDoneCase("square-root");
                     SquareRootUtil.run();
                     break;
-                case "!sum":
-                    printDoneCase("!sum");
+                case "sum":
+                    printDoneCase("sum");
                     SumUtil.run();
                     break;
                 case CMD_BACK:
