@@ -72,8 +72,8 @@ public class PrintUtil {
         System.out.print("Enter the text: ");
     }
 
-    public static void printResult(String resultOut) {
-        System.out.println(resultOut);
+    public static void printResult(String result) {
+        System.out.println(result);
         printBorder("fat");
     }
 
