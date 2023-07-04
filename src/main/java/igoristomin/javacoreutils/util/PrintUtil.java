@@ -33,8 +33,7 @@ public class PrintUtil {
 
     public static boolean doIfBack(String value) {
         if(value.equals(CMD_BACK)) {
-            System.out.println("Done " + CMD_BACK);
-            printBorder("fat");
+            printDoneCase(value);
             return true;
         }
         return false;
@@ -42,8 +41,7 @@ public class PrintUtil {
 
     public static void doIfClose(String value, Scanner valueInput) {
         if(value.equals(CMD_CLOSE)) {
-            System.out.println("Done " + CMD_CLOSE);
-            printBorder("fat");
+            printDoneCase(value);
             valueInput.close();
             System.exit(0);
         }
