@@ -22,11 +22,11 @@ public class MainUtil {
             System.out.println(CMD_CLOSE);
             printBorder("thin");
 
-            // Get String value
+            // Print a message and get the entered value into the utilGroup
             System.out.print("Enter a group of utils: ");
             String utilGroup = utilGroupInput.nextLine();
 
-            // Check the entered value and perform the following actions
+            // Check the utilGroup and perform the following actions
             switch(utilGroup) {
                 case "maths":
                     printDoneCase("maths");
@@ -40,12 +40,12 @@ public class MainUtil {
                     execute = false;
                     break;
                 default:
-                    // Print a message with an invalid value
+                    // Print a message about an invalid value entered
                     printInvalidValue();
                     break;
             }
 
-            // Execute if a value equal to the CMD_CLOSE value is entered
+            // Execute if the utilGroup is equal to the CMD_BACK or CMD_CLOSE
             doIfClose(utilGroup, utilGroupInput);
         }
     }

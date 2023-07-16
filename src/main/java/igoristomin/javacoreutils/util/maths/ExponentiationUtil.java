@@ -17,36 +17,36 @@ class ExponentiationUtil {
             printBackClose();
 
             try {
-                // Get String value
+                // Print a message and get the entered value into the numLine
                 printEnterNum();
                 String numLine = numInput.nextLine();
 
-                // Execute if a value is entered equal to the values CMD_BACK or CMD_CLOSE
+                // Execute if the numLine is equal to the CMD_BACK or CMD_CLOSE
                 if(doIfBack(numLine)) break;
                 doIfClose(numLine, numInput);
 
-                // Convert the value. Expect NumberFormatException
+                // Convert the numLine to a double number. Expect NumberFormatException
                 double num = Double.parseDouble(numLine);
 
-                // Get String value
+                // Print a message and get the entered value into the extentLine
                 System.out.print("Enter the extent: ");
                 String extentLine = extentInput.nextLine();
 
-                // Execute if a value is entered equal to the values CMD_BACK or CMD_CLOSE
+                // Execute if the extentLine is equal to the CMD_BACK or CMD_CLOSE
                 if(doIfBack(extentLine)) break;
                 doIfClose(extentLine, extentInput);
 
-                // Convert the value. Expect NumberFormatException
+                // Convert the extentLine to a double number. Expect NumberFormatException
                 double extent = Double.parseDouble(extentLine);
 
-                // Get and format the result from the method
+                // Format and get the result from the method
                 String result = FORMAT_DECIMAL.format(getExponentiation(num, extent));
 
                 // Set the output format and print the result
                 String resultOut = String.format("%s to the extent of %s: %s", numLine, extentLine, result);
                 printResult(resultOut);
             } catch(NumberFormatException ex) {
-                // Print a message with an invalid value on exception
+                // Print a message about an invalid value entered
                 printInvalidValue();
             }
         }

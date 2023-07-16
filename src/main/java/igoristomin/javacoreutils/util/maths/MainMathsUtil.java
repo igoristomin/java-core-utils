@@ -27,10 +27,10 @@ public class MainMathsUtil {
             printBorder("thin");
             printBackClose();
 
-            // Get String value
+            // Print a message and get the entered value into the util
             String util = printEnterUtil(utilInput);
 
-            // Check the entered value and perform the following actions
+            // Check the util and perform the following actions
             switch(util) {
                 case "average":
                     printDoneCase("average");
@@ -77,12 +77,12 @@ public class MainMathsUtil {
                     execute = false;
                     break;
                 default:
-                    // Print a message with an invalid value
+                    // Print a message about an invalid value entered
                     printInvalidValue();
                     break;
             }
 
-            // Execute if a value is entered equal to the values CMD_BACK or CMD_CLOSE
+            // Execute if the util is equal to the CMD_BACK or CMD_CLOSE
             if(doIfBack(util)) break;
             doIfClose(util, utilInput);
         }

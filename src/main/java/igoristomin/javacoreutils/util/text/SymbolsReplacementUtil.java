@@ -17,25 +17,27 @@ class SymbolsReplacementUtil {
             printHead("Symbols replacement");
             printBackClose();
 
-            // Get String value
+            // Print a message and get the entered value into the textLine
             printEnterText();
             String textLine = textInput.nextLine();
 
-            // Execute if a value is entered equal to the values CMD_BACK or CMD_CLOSE
+            // Execute if the textLine is equal to the CMD_BACK or CMD_CLOSE
             if(doIfBack(textLine)) break;
             doIfClose(textLine, textInput);
 
+            // Print a message and get the entered value into the symbolsLine
             System.out.print("Enter symbols: ");
             String symbolsLine = symbolsInput.nextLine();
 
-            // Execute if a value is entered equal to the values CMD_BACK or CMD_CLOSE
+            // Execute if the symbolsLine is equal to the CMD_BACK or CMD_CLOSE
             if(doIfBack(symbolsLine)) break;
             doIfClose(symbolsLine, symbolsInput);
 
+            // Print a message and get the entered value into the symbolsReplLine
             System.out.print("Enter replacement symbols: ");
             String symbolsReplLine = symbolsReplInput.nextLine();
 
-            // Execute if a value is entered equal to the values CMD_BACK or CMD_CLOSE
+            // Execute if the symbolsReplLine is equal to the CMD_BACK or CMD_CLOSE
             if(doIfBack(symbolsReplLine)) break;
             doIfClose(symbolsReplLine, symbolsReplInput);
 
