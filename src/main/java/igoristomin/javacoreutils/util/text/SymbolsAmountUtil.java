@@ -25,14 +25,14 @@ class SymbolsAmountUtil {
 
             // Get the results
             int symbolsAmount = textLine.length();
-            int symbolsNoSpaces = textLine.replaceAll("\\s", "").length();
-            int symbolsNoSpacesPunctMarks = textLine.replaceAll("\\s|\\p{Punct}", "").length();
+            int symbolsNotSpaces = textLine.replaceAll("\\s", "").length();
+            int symbolsNotSpacesPunctMarks = textLine.replaceAll("\\s|\\p{Punct}", "").length();
             int wordsAmount = getWordsAmount(textLine);
 
             // Print the results
             System.out.printf("Symbols amount: %d%n", symbolsAmount);
-            System.out.printf("Without spaces: %d%n", symbolsNoSpaces);
-            System.out.printf("Without spaces and punctuation marks: %d%n", symbolsNoSpacesPunctMarks);
+            System.out.printf("Without spaces: %d%n", symbolsNotSpaces);
+            System.out.printf("Without spaces and punctuation marks: %d%n", symbolsNotSpacesPunctMarks);
             System.out.printf("Words amount: %d%n", wordsAmount);
             printBorder("fat");
         }
