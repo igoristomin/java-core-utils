@@ -11,9 +11,6 @@ A set of utilities containing mathematical and textual operations using only Jav
 ## Important files
 * Builder configuration: /build.gradle
 
-## Backend schema
-![Relationships of elements](readme/back-schema.svg)
-
 ## Installation
 1. Run this project in a development environment
 
