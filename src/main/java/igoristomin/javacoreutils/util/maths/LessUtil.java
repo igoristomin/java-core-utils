@@ -1,15 +1,13 @@
 package igoristomin.javacoreutils.util.maths;
 
 import org.springframework.stereotype.Service;
-import java.util.Scanner;
+import static igoristomin.javacoreutils.util.InputUtil.inputValue;
 import static igoristomin.javacoreutils.util.PrintUtil.*;
 
 @Service
 class LessUtil {
 
     static void run() {
-        Scanner numsInput = new Scanner(System.in);
-
         while(true) {
             // Print the menu
             printHead("Less");
@@ -17,11 +15,11 @@ class LessUtil {
 
             // Print a message and get the entered value into the numsLine
             printEnterNums();
-            String numsLine = numsInput.nextLine();
+            String numsLine = inputValue();
 
             // Execute if the numsLine is equal to the CMD_BACK or CMD_CLOSE
             if(doIfBack(numsLine)) break;
-            doIfClose(numsLine, numsInput);
+            doIfClose(numsLine);
 
             // Convert the numsLine to a string array numsLineSplit
             String[] numsLineSplit = numsLine

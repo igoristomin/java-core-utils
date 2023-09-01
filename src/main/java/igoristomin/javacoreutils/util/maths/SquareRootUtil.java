@@ -1,15 +1,13 @@
 package igoristomin.javacoreutils.util.maths;
 
 import org.springframework.stereotype.Service;
-import java.util.Scanner;
+import static igoristomin.javacoreutils.util.InputUtil.inputValue;
 import static igoristomin.javacoreutils.util.PrintUtil.*;
 
 @Service
 class SquareRootUtil {
 
     static void run() {
-        Scanner numInput = new Scanner(System.in);
-
         while(true) {
             // Print the menu
             printHead("Square root");
@@ -17,11 +15,11 @@ class SquareRootUtil {
 
             // Print a message and get the entered value into the numLine
             printEnterNum();
-            String numLine = numInput.nextLine();
+            String numLine = inputValue();
 
             // Execute if the numLine is equal to the CMD_BACK or CMD_CLOSE
             if(doIfBack(numLine)) break;
-            doIfClose(numLine, numInput);
+            doIfClose(numLine);
 
             try {
                 // Convert the numLine to a double number

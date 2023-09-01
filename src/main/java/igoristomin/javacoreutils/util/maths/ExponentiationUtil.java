@@ -1,16 +1,13 @@
 package igoristomin.javacoreutils.util.maths;
 
 import org.springframework.stereotype.Service;
-import java.util.Scanner;
+import static igoristomin.javacoreutils.util.InputUtil.inputValue;
 import static igoristomin.javacoreutils.util.PrintUtil.*;
 
 @Service
 class ExponentiationUtil {
 
     static void run() {
-        Scanner numInput = new Scanner(System.in);
-        Scanner extentInput = new Scanner(System.in);
-
         while(true) {
             // Print the menu
             printHead("Exponentiation");
@@ -19,22 +16,22 @@ class ExponentiationUtil {
             try {
                 // Print a message and get the entered value into the numLine
                 printEnterNum();
-                String numLine = numInput.nextLine();
+                String numLine = inputValue();
 
                 // Execute if the numLine is equal to the CMD_BACK or CMD_CLOSE
                 if(doIfBack(numLine)) break;
-                doIfClose(numLine, numInput);
+                doIfClose(numLine);
 
                 // Convert the numLine to a double number. Expect NumberFormatException
                 double num = Double.parseDouble(numLine);
 
                 // Print a message and get the entered value into the extentLine
                 System.out.print("Enter the extent: ");
-                String extentLine = extentInput.nextLine();
+                String extentLine = inputValue();
 
                 // Execute if the extentLine is equal to the CMD_BACK or CMD_CLOSE
                 if(doIfBack(extentLine)) break;
-                doIfClose(extentLine, extentInput);
+                doIfClose(extentLine);
 
                 // Convert the extentLine to a double number. Expect NumberFormatException
                 double extent = Double.parseDouble(extentLine);

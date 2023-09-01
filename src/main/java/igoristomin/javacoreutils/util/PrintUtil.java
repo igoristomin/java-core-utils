@@ -39,10 +39,9 @@ public class PrintUtil {
         return false;
     }
 
-    public static void doIfClose(String value, Scanner valueInput) {
+    public static void doIfClose(String value) {
         if(value.equals(CMD_CLOSE)) {
             printDoneCase(value);
-            valueInput.close();
             System.exit(0);
         }
     }

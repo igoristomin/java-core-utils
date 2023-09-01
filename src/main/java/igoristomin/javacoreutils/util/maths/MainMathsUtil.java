@@ -1,16 +1,14 @@
 package igoristomin.javacoreutils.util.maths;
 
 import org.springframework.stereotype.Service;
-import java.util.Scanner;
+import static igoristomin.javacoreutils.util.InputUtil.inputValue;
 import static igoristomin.javacoreutils.util.PrintUtil.*;
 
 @Service
 public class MainMathsUtil {
 
     public static void run() {
-        Scanner utilInput = new Scanner(System.in);
         boolean execute = true;
-
         while(execute) {
             // Print the menu
             printHead("Maths utils");
@@ -28,7 +26,7 @@ public class MainMathsUtil {
             printBackClose();
 
             // Print a message and get the entered value into the util
-            String util = printEnterUtil(utilInput);
+            String util = inputValue();
 
             // Check the util and perform the following actions
             switch(util) {
@@ -84,7 +82,7 @@ public class MainMathsUtil {
 
             // Execute if the util is equal to the CMD_BACK or CMD_CLOSE
             if(doIfBack(util)) break;
-            doIfClose(util, utilInput);
+            doIfClose(util);
         }
     }
 

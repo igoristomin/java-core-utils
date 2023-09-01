@@ -1,15 +1,13 @@
 package igoristomin.javacoreutils.util.text;
 
 import org.springframework.stereotype.Service;
-import java.util.Scanner;
+import static igoristomin.javacoreutils.util.InputUtil.inputValue;
 import static igoristomin.javacoreutils.util.PrintUtil.*;
 
 @Service
 class SymbolsAmountUtil {
 
     static void run() {
-        Scanner textInput = new Scanner(System.in);
-
         while(true) {
             // Print the menu
             printHead("Symbols amount");
@@ -17,11 +15,11 @@ class SymbolsAmountUtil {
 
             // Print a message and get the entered value into the textLine
             printEnterText();
-            String textLine = textInput.nextLine();
+            String textLine = inputValue();
 
             // Execute if the textLine is equal to the CMD_BACK or CMD_CLOSE
             if(doIfBack(textLine)) break;
-            doIfClose(textLine, textInput);
+            doIfClose(textLine);
 
             // Get the results
             int symbolsAmount = textLine.length();

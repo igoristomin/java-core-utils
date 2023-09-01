@@ -3,16 +3,14 @@ package igoristomin.javacoreutils.util;
 import igoristomin.javacoreutils.util.maths.MainMathsUtil;
 import igoristomin.javacoreutils.util.text.MainTextUtil;
 import org.springframework.stereotype.Service;
-import java.util.Scanner;
+import static igoristomin.javacoreutils.util.InputUtil.inputValue;
 import static igoristomin.javacoreutils.util.PrintUtil.*;
 
 @Service
 public class MainUtil {
 
     public static void run() {
-        Scanner utilGroupInput = new Scanner(System.in);
         boolean execute = true;
-
         while(execute) {
             // Print the menu
             printHead("Java Core Utils");
@@ -24,7 +22,7 @@ public class MainUtil {
 
             // Print a message and get the entered value into the utilGroup
             System.out.print("Enter a group of utils: ");
-            String utilGroup = utilGroupInput.nextLine();
+            String utilGroup = inputValue();
 
             // Check the utilGroup and perform the following actions
             switch(utilGroup) {
@@ -46,7 +44,7 @@ public class MainUtil {
             }
 
             // Execute if the utilGroup is equal to the CMD_BACK or CMD_CLOSE
-            doIfClose(utilGroup, utilGroupInput);
+            doIfClose(utilGroup);
         }
     }
 
