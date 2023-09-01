@@ -18,6 +18,7 @@ public class MainTextUtil {
             printBackClose();
 
             // Print a message and get the entered value into the util
+            printEnterUtil();
             String util = inputValue();
 
             // Check the util and perform the following actions

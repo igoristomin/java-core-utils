@@ -2,7 +2,6 @@ package igoristomin.javacoreutils.util;
 
 import org.springframework.stereotype.Service;
 import java.text.DecimalFormat;
-import java.util.Scanner;
 
 @Service
 public class PrintUtil {
@@ -15,9 +14,8 @@ public class PrintUtil {
         System.out.println("\n======== " + text + " ========");
     }
 
-    public static String printEnterUtil(Scanner utilInput) {
+    public static void printEnterUtil() {
         System.out.print("Enter the util: ");
-        return utilInput.nextLine();
     }
 
     public static void printDoneCase(String util) {
